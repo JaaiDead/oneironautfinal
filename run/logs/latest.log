@@ -1,0 +1,381 @@
+[20Jan2026 23:18:13.115] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\ashwa\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.15, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, oneironautfinal.mixins.json]
+[20Jan2026 23:18:13.121] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.16 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[20Jan2026 23:18:13.234] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[20Jan2026 23:18:13.321] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[20Jan2026 23:18:13.620] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[20Jan2026 23:18:13.724] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/ashwa/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[20Jan2026 23:18:13.733] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Intel(R) Graphics GL version 4.6.0 - Build 32.0.101.8132, Intel
+[20Jan2026 23:18:14.066] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ashwa\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.15\1836c8e1ded76289dc139f501ed1ac21a538c020\javafmllanguage-1.20.1-47.4.15.jar is missing mods.toml file
+[20Jan2026 23:18:14.068] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ashwa\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.15\fe3f9c4e82f1278f42ae0355aefa17de2eb27571\lowcodelanguage-1.20.1-47.4.15.jar is missing mods.toml file
+[20Jan2026 23:18:14.070] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ashwa\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.15\86c819d356825d7878f9d1d2dc63c0fe43bf6073\mclanguage-1.20.1-47.4.15.jar is missing mods.toml file
+[20Jan2026 23:18:14.072] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ashwa\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.15\19aa2647b4e4f5188ec96eb96657b028af852cef\fmlcore-1.20.1-47.4.15.jar is missing mods.toml file
+[20Jan2026 23:18:14.470] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
+[20Jan2026 23:18:16.145] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[20Jan2026 23:18:16.155] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\ashwa\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[20Jan2026 23:18:16.252] [main/WARN] [mixin/]: Reference map 'oneironautfinal.refmap.json' for oneironautfinal.mixins.json could not be read. If this is a development environment you can ignore this message
+[20Jan2026 23:18:16.683] [main/INFO] [mixin/]: Remapping refMap paucal.mixins.refmap.json using D:\Intelij Projects\OneIronAutFinal\build\createSrgToMcp\output.srg
+[20Jan2026 23:18:16.684] [main/INFO] [mixin/]: Remapping refMap paucal.mixins.refmap.json using D:\Intelij Projects\OneIronAutFinal\build\createSrgToMcp\output.srg
+[20Jan2026 23:18:16.685] [main/INFO] [mixin/]: Remapping refMap common.refmap.json using D:\Intelij Projects\OneIronAutFinal\build\createSrgToMcp\output.srg
+[20Jan2026 23:18:16.685] [main/INFO] [mixin/]: Remapping refMap hexcasting.mixins.refmap.json using D:\Intelij Projects\OneIronAutFinal\build\createSrgToMcp\output.srg
+[20Jan2026 23:18:16.686] [main/INFO] [mixin/]: Remapping refMap hexcasting.mixins.refmap.json using D:\Intelij Projects\OneIronAutFinal\build\createSrgToMcp\output.srg
+[20Jan2026 23:18:16.686] [main/INFO] [mixin/]: Remapping refMap caelus.refmap.json using D:\Intelij Projects\OneIronAutFinal\build\createSrgToMcp\output.srg
+[20Jan2026 23:18:16.686] [main/INFO] [mixin/]: Remapping refMap patchouli.refmap.json using D:\Intelij Projects\OneIronAutFinal\build\createSrgToMcp\output.srg
+[20Jan2026 23:18:16.934] [main/WARN] [mixin/]: Error loading class: com/simibubi/create/content/trains/display/FlapDisplayRenderer$FlapDisplayRenderOutput (java.lang.ClassNotFoundException: com.simibubi.create.content.trains.display.FlapDisplayRenderer$FlapDisplayRenderOutput)
+[20Jan2026 23:18:16.935] [main/WARN] [mixin/]: Error loading class: com/simibubi/create/content/trains/display/FlapDisplaySection (java.lang.ClassNotFoundException: com.simibubi.create.content.trains.display.FlapDisplaySection)
+[20Jan2026 23:18:16.935] [main/WARN] [mixin/]: Error loading class: com/simibubi/create/content/trains/display/FlapDisplayRenderer (java.lang.ClassNotFoundException: com.simibubi.create.content.trains.display.FlapDisplayRenderer)
+[20Jan2026 23:18:16.936] [main/WARN] [mixin/]: Error loading class: com/hrznstudio/emojiful/ClientEmojiHandler (java.lang.ClassNotFoundException: com.hrznstudio.emojiful.ClientEmojiHandler)
+[20Jan2026 23:18:17.265] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.6).
+[20Jan2026 23:18:23.085] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 86 milliseconds
+[20Jan2026 23:18:24.409] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/ashwa/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.15_mapped_official_1.20.1/forge-1.20.1-47.4.15_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[20Jan2026 23:18:24.409] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/ashwa/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.15_mapped_official_1.20.1/forge-1.20.1-47.4.15_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[20Jan2026 23:18:24.444] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[20Jan2026 23:18:24.447] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[20Jan2026 23:18:24.500] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[20Jan2026 23:18:24.834] [modloading-worker-0/INFO] [paucal/]: Hello PAUCAL! This is FORGE!
+[20Jan2026 23:18:24.889] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.15, for MC 1.20.1 with MCP 20230612.114412
+[20Jan2026 23:18:24.889] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.15 Initialized
+[20Jan2026 23:18:25.266] [modloading-worker-0/INFO] [thedarkcolour.kotlinforforge.test.KotlinForForge/]: Kotlin For Forge Enabled!
+[20Jan2026 23:18:26.698] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [oneironautfinal]
+[20Jan2026 23:18:26.727] [Render thread/INFO] [inline/]: registering tooltip components
+[20Jan2026 23:18:26.806] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[20Jan2026 23:18:26.823] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Intelij Projects\OneIronAutFinal\run\config\patchouli-client.toml is not correct. Correcting
+[20Jan2026 23:18:26.823] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key disableAdvancementLocking was corrected from null to its default, false. 
+[20Jan2026 23:18:26.824] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key noAdvancementBooks was corrected from null to its default, []. 
+[20Jan2026 23:18:26.825] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key testingMode was corrected from null to its default, false. 
+[20Jan2026 23:18:26.825] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key inventoryButtonBook was corrected from null to its default, . 
+[20Jan2026 23:18:26.826] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key useShiftForQuickLookup was corrected from null to its default, false. 
+[20Jan2026 23:18:26.827] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key textOverflowMode was corrected from null to its default, RESIZE. 
+[20Jan2026 23:18:26.828] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key quickLookupTime was corrected from null to its default, 10. 
+[20Jan2026 23:18:26.846] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Intelij Projects\OneIronAutFinal\run\config\forge-client.toml is not correct. Correcting
+[20Jan2026 23:18:26.846] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client was corrected from null to its default, SimpleCommentedConfig:{}. 
+[20Jan2026 23:18:26.847] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.alwaysSetupTerrainOffThread was corrected from null to its default, false. 
+[20Jan2026 23:18:26.847] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.experimentalForgeLightPipelineEnabled was corrected from null to its default, false. 
+[20Jan2026 23:18:26.848] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.showLoadWarnings was corrected from null to its default, true. 
+[20Jan2026 23:18:26.848] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.useCombinedDepthStencilAttachment was corrected from null to its default, false. 
+[20Jan2026 23:18:26.848] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.compressLanIPv6Addresses was corrected from null to its default, true. 
+[20Jan2026 23:18:26.848] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.calculateAllNormals was corrected from null to its default, false. 
+[20Jan2026 23:18:26.848] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.stabilizeDirectionGetNearest was corrected from null to its default, true. 
+[20Jan2026 23:18:26.848] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.allowMipmapLowering was corrected from null to its default, false. 
+[20Jan2026 23:18:26.851] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Intelij Projects\OneIronAutFinal\run\config\hexcasting-client.toml is not correct. Correcting
+[20Jan2026 23:18:26.852] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ctrlTogglesOffStrokeOrder was corrected from null to its default, false. 
+[20Jan2026 23:18:26.852] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key invertSpellbookScrollDirection was corrected from null to its default, false. 
+[20Jan2026 23:18:26.853] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key invertAbacusScrollDirection was corrected from null to its default, false. 
+[20Jan2026 23:18:26.853] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key gridSnapThreshold was corrected from null to its default, 0.5. 
+[20Jan2026 23:18:26.854] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key clickingTogglesDrawing was corrected from null to its default, false. 
+[20Jan2026 23:18:26.854] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key alwaysShowListCommas was corrected from null to its default, false. 
+[20Jan2026 23:18:26.856] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Intelij Projects\OneIronAutFinal\run\config\paucal-common.toml is not correct. Correcting
+[20Jan2026 23:18:26.856] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key allowPats was corrected from null to its default, true. 
+[20Jan2026 23:18:26.857] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key loadContributors was corrected from null to its default, true. 
+[20Jan2026 23:18:26.858] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Intelij Projects\OneIronAutFinal\run\config\oneironautfinal-common.toml is not correct. Correcting
+[20Jan2026 23:18:26.859] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logDirtBlock was corrected from null to its default, true. 
+[20Jan2026 23:18:26.859] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key magicNumber was corrected from null to its default, 42. 
+[20Jan2026 23:18:26.860] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key magicNumberIntroduction was corrected from null to its default, The magic number is... . 
+[20Jan2026 23:18:26.861] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key items was corrected from null to its default, [minecraft:iron_ingot]. 
+[20Jan2026 23:18:26.864] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Intelij Projects\OneIronAutFinal\run\config\hexcasting-common.toml is not correct. Correcting
+[20Jan2026 23:18:26.865] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Media Amounts was corrected from null to its default, SimpleCommentedConfig:{}. 
+[20Jan2026 23:18:26.865] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Media Amounts.dustMediaAmount was corrected from null to its default, 10000. 
+[20Jan2026 23:18:26.865] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Media Amounts.shardMediaAmount was corrected from null to its default, 50000. 
+[20Jan2026 23:18:26.865] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Media Amounts.chargedCrystalMediaAmount was corrected from null to its default, 100000. 
+[20Jan2026 23:18:26.865] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Media Amounts.mediaToHealthRate was corrected from null to its default, 10000.0. 
+[20Jan2026 23:18:26.865] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Cooldowns was corrected from null to its default, SimpleCommentedConfig:{}. 
+[20Jan2026 23:18:26.866] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Cooldowns.cypherCooldown was corrected from null to its default, 8. 
+[20Jan2026 23:18:26.866] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Cooldowns.trinketCooldown was corrected from null to its default, 5. 
+[20Jan2026 23:18:26.866] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Cooldowns.artifactCooldown was corrected from null to its default, 3. 
+[20Jan2026 23:18:26.874] [Worker-Main-11/INFO] [org.arcticquests.dev.oneironautfinal.OneironautFinal.Oneironautfinal/]: HELLO FROM COMMON SETUP
+[20Jan2026 23:18:26.874] [Worker-Main-11/INFO] [org.arcticquests.dev.oneironautfinal.OneironautFinal.Oneironautfinal/]: DIRT BLOCK >> minecraft:dirt
+[20Jan2026 23:18:26.874] [Worker-Main-11/INFO] [org.arcticquests.dev.oneironautfinal.OneironautFinal.Oneironautfinal/]: DIRT BLOCK >> minecraft:dirt
+[20Jan2026 23:18:26.874] [Worker-Main-11/INFO] [org.arcticquests.dev.oneironautfinal.OneironautFinal.Oneironautfinal/]: The magic number is... 42
+[20Jan2026 23:18:26.875] [Worker-Main-11/INFO] [org.arcticquests.dev.oneironautfinal.OneironautFinal.Oneironautfinal/]: ITEM >> iron_ingot
+[20Jan2026 23:18:27.049] [Worker-Main-4/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[20Jan2026 23:18:27.097] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[20Jan2026 23:18:27.294] [Worker-Main-14/INFO] [org.arcticquests.dev.oneironautfinal.OneironautFinal.Oneironautfinal/]: HELLO FROM CLIENT SETUP
+[20Jan2026 23:18:27.294] [Worker-Main-14/INFO] [org.arcticquests.dev.oneironautfinal.OneironautFinal.Oneironautfinal/]: MINECRAFT NAME >> Dev
+[20Jan2026 23:18:27.597] [Worker-Main-16/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'oneironautfinal:blockstates/example_block.json' missing model for variant: 'oneironautfinal:example_block#'
+[20Jan2026 23:18:27.605] [Worker-Main-16/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'oneironautfinal:example_block#inventory' referenced from: oneironautfinal:example_block#inventory: java.io.FileNotFoundException: oneironautfinal:models/item/example_block.json
+[20Jan2026 23:18:27.605] [Worker-Main-16/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'oneironautfinal:example_item#inventory' referenced from: oneironautfinal:example_item#inventory: java.io.FileNotFoundException: oneironautfinal:models/item/example_item.json
+[20Jan2026 23:18:28.763] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 47.4.15 Target: null
+[20Jan2026 23:18:28.918] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[20Jan2026 23:18:28.918] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[20Jan2026 23:18:28.918] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: paucal:dummy_headpat
+[20Jan2026 23:18:29.649] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
+[20Jan2026 23:18:29.650] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[20Jan2026 23:18:29.708] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[20Jan2026 23:18:29.738] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[20Jan2026 23:18:29.739] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[20Jan2026 23:18:29.740] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[20Jan2026 23:18:29.742] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[20Jan2026 23:18:29.749] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[20Jan2026 23:18:29.750] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[20Jan2026 23:18:29.750] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[20Jan2026 23:18:29.751] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[20Jan2026 23:18:29.854] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[20Jan2026 23:18:29.978] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[20Jan2026 23:18:29.981] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[20Jan2026 23:18:29.982] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[20Jan2026 23:18:29.984] [Render thread/INFO] [patchouli/]: BookContentResourceListenerLoader preloaded 94 jsons
+[20Jan2026 23:18:29.984] [Render thread/INFO] [patchouli/]: Not reloading resource pack-based books as client world is missing
+[20Jan2026 23:18:30.906] [PAUCAL Contributors Loading Thread/INFO] [paucal/]: Loaded 82 contributors and 7 headpat sounds from Github
+[20Jan2026 23:20:12.279] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[20Jan2026 23:20:14.835] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe hexcasting:compat/farmersdelight/cutting/akashic_wood as it's serializer returned null
+[20Jan2026 23:20:14.871] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe hexcasting:compat/farmersdelight/cutting/edified_log as it's serializer returned null
+[20Jan2026 23:20:14.872] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe hexcasting:compat/create/crushing/amethyst_shard as it's serializer returned null
+[20Jan2026 23:20:14.880] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe hexcasting:compat/farmersdelight/cutting/edified_log_aventurine as it's serializer returned null
+[20Jan2026 23:20:14.880] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe hexcasting:compat/farmersdelight/cutting/edified_log_amethyst as it's serializer returned null
+[20Jan2026 23:20:14.884] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe create:crushing/amethyst_cluster as it's serializer returned null
+[20Jan2026 23:20:14.885] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe hexcasting:compat/farmersdelight/cutting/akashic_door as it's serializer returned null
+[20Jan2026 23:20:14.885] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe hexcasting:compat/farmersdelight/cutting/edified_log_citrine as it's serializer returned null
+[20Jan2026 23:20:14.886] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe hexcasting:compat/farmersdelight/cutting/akashic_trapdoor as it's serializer returned null
+[20Jan2026 23:20:14.886] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe create:crushing/amethyst_block as it's serializer returned null
+[20Jan2026 23:20:14.886] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe hexcasting:compat/farmersdelight/cutting/edified_log_purple as it's serializer returned null
+[20Jan2026 23:20:14.888] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 8 recipes
+[20Jan2026 23:20:15.013] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1420 advancements
+[20Jan2026 23:20:17.833] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[20Jan2026 23:20:17.833] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[20Jan2026 23:20:17.901] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\New World\serverconfig\forge-server.toml is not correct. Correcting
+[20Jan2026 23:20:17.902] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SimpleCommentedConfig:{}. 
+[20Jan2026 23:20:17.902] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
+[20Jan2026 23:20:17.903] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
+[20Jan2026 23:20:17.903] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
+[20Jan2026 23:20:17.903] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.zombieBaseSummonChance was corrected from null to its default, 0.1. 
+[20Jan2026 23:20:17.903] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.zombieBabyChance was corrected from null to its default, 0.05. 
+[20Jan2026 23:20:17.903] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
+[20Jan2026 23:20:17.903] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
+[20Jan2026 23:20:17.904] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.useItemWithDurationZero was corrected from null to its default, false. 
+[20Jan2026 23:20:17.907] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\New World\serverconfig\hexcasting-server.toml is not correct. Correcting
+[20Jan2026 23:20:17.908] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells was corrected from null to its default, SimpleCommentedConfig:{}. 
+[20Jan2026 23:20:17.908] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.maxOpCount was corrected from null to its default, 100000. 
+[20Jan2026 23:20:17.908] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spells.opBreakHarvestLevel was corrected from null to its default, 3. 
+[20Jan2026 23:20:17.908] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spell Circles was corrected from null to its default, SimpleCommentedConfig:{}. 
+[20Jan2026 23:20:17.908] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spell Circles.maxSpellCircleLength was corrected from null to its default, 1024. 
+[20Jan2026 23:20:17.909] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Spell Circles.circleActionDenyList was corrected from null to its default, []. 
+[20Jan2026 23:20:17.909] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Loot was corrected from null to its default, SimpleCommentedConfig:{}. 
+[20Jan2026 23:20:17.909] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Loot.traderScrollChance was corrected from null to its default, 0.2. 
+[20Jan2026 23:20:17.910] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key actionDenyList was corrected from null to its default, []. 
+[20Jan2026 23:20:17.911] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key greaterTeleportSplatsItems was corrected from null to its default, true. 
+[20Jan2026 23:20:17.912] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key villagersOffendedByMindMurder was corrected from null to its default, true. 
+[20Jan2026 23:20:17.913] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key tpDimDenyList was corrected from null to its default, [twilightforest:twilight_forest]. 
+[20Jan2026 23:20:17.914] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key doesTrueNameHaveAmbit was corrected from null to its default, true. 
+[20Jan2026 23:20:20.259] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[20Jan2026 23:20:20.705] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[20Jan2026 23:20:20.780] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[20Jan2026 23:20:21.284] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[20Jan2026 23:20:21.777] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 3%
+[20Jan2026 23:20:22.283] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 5%
+[20Jan2026 23:20:22.774] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 10%
+[20Jan2026 23:20:23.277] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 15%
+[20Jan2026 23:20:23.773] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 22%
+[20Jan2026 23:20:24.273] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 29%
+[20Jan2026 23:20:24.773] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 35%
+[20Jan2026 23:20:25.287] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 43%
+[20Jan2026 23:20:25.770] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 54%
+[20Jan2026 23:20:26.275] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 62%
+[20Jan2026 23:20:26.774] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 69%
+[20Jan2026 23:20:27.283] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 81%
+[20Jan2026 23:20:27.772] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 88%
+[20Jan2026 23:20:28.277] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 98%
+[20Jan2026 23:20:28.308] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[20Jan2026 23:20:28.308] [Server thread/INFO] [org.arcticquests.dev.oneironautfinal.OneironautFinal.Oneironautfinal/]: HELLO from server starting
+[20Jan2026 23:20:28.310] [Server thread/INFO] [hexcasting/]: We're on the server! Loaded 155 regular actions, 14 per-world actions, and 2 special handlers
+[20Jan2026 23:20:28.310] [Server thread/INFO] [patchouli/]: Sending reload packet to clients
+[20Jan2026 23:20:28.312] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 8042 ms
+[20Jan2026 23:20:28.376] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[20Jan2026 23:20:28.378] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[20Jan2026 23:20:28.578] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[20Jan2026 23:20:29.451] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[20Jan2026 23:20:29.484] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:ab096fd4] logged in with entity id 104 at (765.5, 71.0, 669.5)
+[20Jan2026 23:20:29.562] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:thanatos] which has same signature as ResourceKey[hexcasting:action / hexcasting:thanatos], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:construct] which has same signature as ResourceKey[hexcasting:action / hexcasting:construct], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:deconstruct_vec] which has same signature as ResourceKey[hexcasting:action / hexcasting:deconstruct_vec], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:potion/levitation] which has same signature as ResourceKey[hexcasting:action / hexcasting:potion/levitation], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:not] which has same signature as ResourceKey[hexcasting:action / hexcasting:not], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:sentinel/destroy] which has same signature as ResourceKey[hexcasting:action / hexcasting:sentinel/destroy], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_entity/player] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_entity/player], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:raycast/axis] which has same signature as ResourceKey[hexcasting:action / hexcasting:raycast/axis], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:read/entity] which has same signature as ResourceKey[hexcasting:action / hexcasting:read/entity], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_entity_velocity] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_entity_velocity], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:craft/cypher] which has same signature as ResourceKey[hexcasting:action / hexcasting:craft/cypher], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:potion/slowness] which has same signature as ResourceKey[hexcasting:action / hexcasting:potion/slowness], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:2dup] which has same signature as ResourceKey[hexcasting:action / hexcasting:2dup], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:random] which has same signature as ResourceKey[hexcasting:action / hexcasting:random], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:for_each] which has same signature as ResourceKey[hexcasting:action / hexcasting:for_each], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:write/entity] which has same signature as ResourceKey[hexcasting:action / hexcasting:write/entity], overriding it.
+[20Jan2026 23:20:29.664] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:abs] which has same signature as ResourceKey[hexcasting:action / hexcasting:abs], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_entity/animal] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_entity/animal], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:destroy_water] which has same signature as ResourceKey[hexcasting:action / hexcasting:destroy_water], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:last_n_list] which has same signature as ResourceKey[hexcasting:action / hexcasting:last_n_list], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/double/tau] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/double/tau], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:xor] which has same signature as ResourceKey[hexcasting:action / hexcasting:xor], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:construct_vec] which has same signature as ResourceKey[hexcasting:action / hexcasting:construct_vec], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:circle/bounds/max] which has same signature as ResourceKey[hexcasting:action / hexcasting:circle/bounds/max], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:singleton] which has same signature as ResourceKey[hexcasting:action / hexcasting:singleton], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:pow] which has same signature as ResourceKey[hexcasting:action / hexcasting:pow], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:eval/cc] which has same signature as ResourceKey[hexcasting:action / hexcasting:eval/cc], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:akashic/write] which has same signature as ResourceKey[hexcasting:action / hexcasting:akashic/write], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:arccos] which has same signature as ResourceKey[hexcasting:action / hexcasting:arccos], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:reverse] which has same signature as ResourceKey[hexcasting:action / hexcasting:reverse], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:replace] which has same signature as ResourceKey[hexcasting:action / hexcasting:replace], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:empty_list] which has same signature as ResourceKey[hexcasting:action / hexcasting:empty_list], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:extinguish] which has same signature as ResourceKey[hexcasting:action / hexcasting:extinguish], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:add] which has same signature as ResourceKey[hexcasting:action / hexcasting:add], overriding it.
+[20Jan2026 23:20:29.665] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:duplicate] which has same signature as ResourceKey[hexcasting:action / hexcasting:duplicate], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:akashic/read] which has same signature as ResourceKey[hexcasting:action / hexcasting:akashic/read], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:slice] which has same signature as ResourceKey[hexcasting:action / hexcasting:slice], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:or] which has same signature as ResourceKey[hexcasting:action / hexcasting:or], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:duplicate_n] which has same signature as ResourceKey[hexcasting:action / hexcasting:duplicate_n], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:sentinel/wayfind] which has same signature as ResourceKey[hexcasting:action / hexcasting:sentinel/wayfind], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/double/pi] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/double/pi], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:sin] which has same signature as ResourceKey[hexcasting:action / hexcasting:sin], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:craft/artifact] which has same signature as ResourceKey[hexcasting:action / hexcasting:craft/artifact], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:if] which has same signature as ResourceKey[hexcasting:action / hexcasting:if], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:readable] which has same signature as ResourceKey[hexcasting:action / hexcasting:readable], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/false] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/false], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:bool_coerce] which has same signature as ResourceKey[hexcasting:action / hexcasting:bool_coerce], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/not_animal] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/not_animal], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_entity/item] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_entity/item], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/not_player] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/not_player], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:read] which has same signature as ResourceKey[hexcasting:action / hexcasting:read], overriding it.
+[20Jan2026 23:20:29.666] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:halt] which has same signature as ResourceKey[hexcasting:action / hexcasting:halt], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:sentinel/create] which has same signature as ResourceKey[hexcasting:action / hexcasting:sentinel/create], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:potion/wither] which has same signature as ResourceKey[hexcasting:action / hexcasting:potion/wither], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:div] which has same signature as ResourceKey[hexcasting:action / hexcasting:div], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:erase] which has same signature as ResourceKey[hexcasting:action / hexcasting:erase], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:less] which has same signature as ResourceKey[hexcasting:action / hexcasting:less], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/vec/py] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/vec/py], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:index_of] which has same signature as ResourceKey[hexcasting:action / hexcasting:index_of], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/not_living] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/not_living], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/not_monster] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/not_monster], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:append] which has same signature as ResourceKey[hexcasting:action / hexcasting:append], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:unique] which has same signature as ResourceKey[hexcasting:action / hexcasting:unique], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:remove_from] which has same signature as ResourceKey[hexcasting:action / hexcasting:remove_from], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:unappend] which has same signature as ResourceKey[hexcasting:action / hexcasting:unappend], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:read/local] which has same signature as ResourceKey[hexcasting:action / hexcasting:read/local], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:print] which has same signature as ResourceKey[hexcasting:action / hexcasting:print], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:coerce_axial] which has same signature as ResourceKey[hexcasting:action / hexcasting:coerce_axial], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:eval] which has same signature as ResourceKey[hexcasting:action / hexcasting:eval], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/not_item] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/not_item], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:potion/poison] which has same signature as ResourceKey[hexcasting:action / hexcasting:potion/poison], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:rotate] which has same signature as ResourceKey[hexcasting:action / hexcasting:rotate], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_entity] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_entity], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/item] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/item], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:logarithm] which has same signature as ResourceKey[hexcasting:action / hexcasting:logarithm], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:deconstruct] which has same signature as ResourceKey[hexcasting:action / hexcasting:deconstruct], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:circle/impetus_dir] which has same signature as ResourceKey[hexcasting:action / hexcasting:circle/impetus_dir], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:flight/time] which has same signature as ResourceKey[hexcasting:action / hexcasting:flight/time], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:add_motion] which has same signature as ResourceKey[hexcasting:action / hexcasting:add_motion], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:cos] which has same signature as ResourceKey[hexcasting:action / hexcasting:cos], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:craft/trinket] which has same signature as ResourceKey[hexcasting:action / hexcasting:craft/trinket], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:swap] which has same signature as ResourceKey[hexcasting:action / hexcasting:swap], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:less_eq] which has same signature as ResourceKey[hexcasting:action / hexcasting:less_eq], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/vec/pz] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/vec/pz], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:writable/entity] which has same signature as ResourceKey[hexcasting:action / hexcasting:writable/entity], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/vec/0] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/vec/0], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:floor] which has same signature as ResourceKey[hexcasting:action / hexcasting:floor], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_caster] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_caster], overriding it.
+[20Jan2026 23:20:29.667] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:raycast/entity] which has same signature as ResourceKey[hexcasting:action / hexcasting:raycast/entity], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:entity_pos/foot] which has same signature as ResourceKey[hexcasting:action / hexcasting:entity_pos/foot], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:beep] which has same signature as ResourceKey[hexcasting:action / hexcasting:beep], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:write/local] which has same signature as ResourceKey[hexcasting:action / hexcasting:write/local], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/vec/nz] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/vec/nz], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:edify] which has same signature as ResourceKey[hexcasting:action / hexcasting:edify], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:mul] which has same signature as ResourceKey[hexcasting:action / hexcasting:mul], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/monster] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/monster], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:conjure_light] which has same signature as ResourceKey[hexcasting:action / hexcasting:conjure_light], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:fisherman] which has same signature as ResourceKey[hexcasting:action / hexcasting:fisherman], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:break_block] which has same signature as ResourceKey[hexcasting:action / hexcasting:break_block], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:raycast] which has same signature as ResourceKey[hexcasting:action / hexcasting:raycast], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/vec/nx] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/vec/nx], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:ceil] which has same signature as ResourceKey[hexcasting:action / hexcasting:ceil], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:splat] which has same signature as ResourceKey[hexcasting:action / hexcasting:splat], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:potion/weakness] which has same signature as ResourceKey[hexcasting:action / hexcasting:potion/weakness], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:sub] which has same signature as ResourceKey[hexcasting:action / hexcasting:sub], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:index] which has same signature as ResourceKey[hexcasting:action / hexcasting:index], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:cycle_variant] which has same signature as ResourceKey[hexcasting:action / hexcasting:cycle_variant], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_entity_look] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_entity_look], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:stack_len] which has same signature as ResourceKey[hexcasting:action / hexcasting:stack_len], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:place_block] which has same signature as ResourceKey[hexcasting:action / hexcasting:place_block], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:arcsin] which has same signature as ResourceKey[hexcasting:action / hexcasting:arcsin], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/vec/ny] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/vec/ny], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:colorize] which has same signature as ResourceKey[hexcasting:action / hexcasting:colorize], overriding it.
+[20Jan2026 23:20:29.668] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:conjure_block] which has same signature as ResourceKey[hexcasting:action / hexcasting:conjure_block], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:ignite] which has same signature as ResourceKey[hexcasting:action / hexcasting:ignite], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:over] which has same signature as ResourceKey[hexcasting:action / hexcasting:over], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/animal] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/animal], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:tan] which has same signature as ResourceKey[hexcasting:action / hexcasting:tan], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:writable] which has same signature as ResourceKey[hexcasting:action / hexcasting:writable], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/vec/px] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/vec/px], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:recharge] which has same signature as ResourceKey[hexcasting:action / hexcasting:recharge], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:blink] which has same signature as ResourceKey[hexcasting:action / hexcasting:blink], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:greater_eq] which has same signature as ResourceKey[hexcasting:action / hexcasting:greater_eq], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_entity/monster] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_entity/monster], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:readable/entity] which has same signature as ResourceKey[hexcasting:action / hexcasting:readable/entity], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/double/e] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/double/e], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:swizzle] which has same signature as ResourceKey[hexcasting:action / hexcasting:swizzle], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/living] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/living], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:circle/bounds/min] which has same signature as ResourceKey[hexcasting:action / hexcasting:circle/bounds/min], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:write] which has same signature as ResourceKey[hexcasting:action / hexcasting:write], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:create_water] which has same signature as ResourceKey[hexcasting:action / hexcasting:create_water], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:tuck] which has same signature as ResourceKey[hexcasting:action / hexcasting:tuck], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:entity_pos/eye] which has same signature as ResourceKey[hexcasting:action / hexcasting:entity_pos/eye], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:flight/range] which has same signature as ResourceKey[hexcasting:action / hexcasting:flight/range], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/null] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/null], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:const/true] which has same signature as ResourceKey[hexcasting:action / hexcasting:const/true], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:sentinel/get_pos] which has same signature as ResourceKey[hexcasting:action / hexcasting:sentinel/get_pos], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:flight/can_fly] which has same signature as ResourceKey[hexcasting:action / hexcasting:flight/can_fly], overriding it.
+[20Jan2026 23:20:29.670] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:equals] which has same signature as ResourceKey[hexcasting:action / hexcasting:equals], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:and] which has same signature as ResourceKey[hexcasting:action / hexcasting:and], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:rotate_reverse] which has same signature as ResourceKey[hexcasting:action / hexcasting:rotate_reverse], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:modulo] which has same signature as ResourceKey[hexcasting:action / hexcasting:modulo], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:arctan2] which has same signature as ResourceKey[hexcasting:action / hexcasting:arctan2], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:not_equals] which has same signature as ResourceKey[hexcasting:action / hexcasting:not_equals], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:greater] which has same signature as ResourceKey[hexcasting:action / hexcasting:greater], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:bonemeal] which has same signature as ResourceKey[hexcasting:action / hexcasting:bonemeal], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:explode/fire] which has same signature as ResourceKey[hexcasting:action / hexcasting:explode/fire], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:zone_entity/player] which has same signature as ResourceKey[hexcasting:action / hexcasting:zone_entity/player], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:explode] which has same signature as ResourceKey[hexcasting:action / hexcasting:explode], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:circle/impetus_pos] which has same signature as ResourceKey[hexcasting:action / hexcasting:circle/impetus_pos], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:arctan] which has same signature as ResourceKey[hexcasting:action / hexcasting:arctan], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_entity/living] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_entity/living], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:fisherman/copy] which has same signature as ResourceKey[hexcasting:action / hexcasting:fisherman/copy], overriding it.
+[20Jan2026 23:20:29.671] [Render thread/WARN] [hexcasting/]: Inserted ResourceKey[hexcasting:action / hexcasting:get_entity_height] which has same signature as ResourceKey[hexcasting:action / hexcasting:get_entity_height], overriding it.
+[20Jan2026 23:20:29.672] [Render thread/INFO] [hexcasting/]: We're on the client! Loaded 155 regular actions, 14 per-world actions, and 2 special handlers
+[20Jan2026 23:20:29.950] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] message.paucal.patron
+[20Jan2026 23:20:30.131] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 4 advancements
+[20Jan2026 23:20:30.134] [Render thread/INFO] [patchouli/]: BookContentResourceListenerLoader: Files found in 150.9 μs
+[20Jan2026 23:20:30.141] [Render thread/WARN] [patchouli/]: Queried for unknown config flag: hexcasting:any_interop
+[20Jan2026 23:20:30.145] [Render thread/INFO] [patchouli/]: BookContentResourceListenerLoader: Files found in 158.2 μs
+[20Jan2026 23:20:30.177] [Render thread/WARN] [patchouli/]: Queried for unknown config flag: hexcasting:any_interop
+[20Jan2026 23:20:30.178] [Render thread/INFO] [patchouli/]: BookContentResourceListenerLoader: Files found in 96.00 μs
+[20Jan2026 23:20:38.082] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[20Jan2026 23:20:38.094] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20Jan2026 23:20:38.111] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20Jan2026 23:20:38.113] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20Jan2026 23:20:49.393] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 21 advancements
+[20Jan2026 23:21:02.697] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 32 advancements
+[20Jan2026 23:21:06.496] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] The pattern HexPattern[NORTH_WEST, wdadwwweewewwdwdw] isn't associated with any action
+[20Jan2026 23:21:11.911] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] The pattern HexPattern[NORTH_EAST, qeqqweaew] isn't associated with any action
+[20Jan2026 23:21:17.577] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] The pattern HexPattern[SOUTH_WEST, ewqdadadeweqdadqdewweqedqeqdadadqdwdqede] isn't associated with any action
+[20Jan2026 23:21:22.277] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] The pattern HexPattern[SOUTH_WEST, qdqeeqdwe] isn't associated with any action
+[20Jan2026 23:21:48.576] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Bookkeeper's Gambit: ---: expected 3 or more arguments but the stack was only 2 tall
+[20Jan2026 23:22:02.793] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] The pattern HexPattern[SOUTH_EAST, eqqweadqwwwwweadaeqqeqeqeqqweadae] isn't associated with any action
+[20Jan2026 23:22:44.744] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Bookkeeper's Gambit: -: expected 1 or more arguments but the stack was empty
+[20Jan2026 23:22:51.693] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] The pattern HexPattern[SOUTH_WEST, qqeqqwqwqqe] isn't associated with any action
+[20Jan2026 23:23:09.682] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[20Jan2026 23:23:09.687] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20Jan2026 23:23:09.691] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20Jan2026 23:23:09.693] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20Jan2026 23:23:12.943] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[20Jan2026 23:23:12.995] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[20Jan2026 23:23:12.996] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[20Jan2026 23:23:13.002] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[20Jan2026 23:23:13.049] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[20Jan2026 23:23:13.050] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[20Jan2026 23:23:13.050] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[20Jan2026 23:23:13.465] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[20Jan2026 23:23:14.200] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[20Jan2026 23:23:14.201] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[20Jan2026 23:23:14.219] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[20Jan2026 23:23:14.219] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[20Jan2026 23:23:14.219] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[20Jan2026 23:23:14.219] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
