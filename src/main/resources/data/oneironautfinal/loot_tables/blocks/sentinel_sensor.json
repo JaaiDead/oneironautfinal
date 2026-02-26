@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:sentinel_sensor"
+          "name": "oneironaut:sentinel_sensor"
         }
       ],
       "rolls": 1.0

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:concept_modifier_comparison"
+          "name": "oneironaut:concept_modifier_comparison"
         }
       ],
       "rolls": 1.0

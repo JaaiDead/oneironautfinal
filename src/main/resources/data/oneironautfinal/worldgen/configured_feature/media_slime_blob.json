@@ -1,7 +1,7 @@
 {
-  "type": "oneironautfinal:block_blob",
+  "type": "oneironaut:block_blob",
   "config": {
-    "mainblockid": "oneironautfinal:media_gel",
+    "mainblockid": "oneironaut:media_gel",
     "size": 6,
     "squish": 2,
     "falloff": 5,

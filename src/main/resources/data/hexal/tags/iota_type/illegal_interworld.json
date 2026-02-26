@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "oneironautfinal:dim",
-    "oneironautfinal:uuid"
+    "oneironaut:dim",
+    "oneironaut:uuid"
   ]
 }

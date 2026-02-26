@@ -8,16 +8,16 @@
   "display": {
     "announce_to_chat": false,
     "description": {
-      "translate": "oneironautfinal.advancements.lore.root.description"
+      "translate": "oneironaut.advancements.lore.root.description"
     },
     "frame": "task",
     "hidden": true,
     "icon": {
-      "item": "oneironautfinal:memory_fragment"
+      "item": "oneironaut:memory_fragment"
     },
     "show_toast": false,
     "title": {
-      "translate": "oneironautfinal.advancements.lore.root"
+      "translate": "oneironaut.advancements.lore.root"
     }
   },
   "requirements": [

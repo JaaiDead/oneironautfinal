@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "oneironautfinal:rumination",
-    "oneironautfinal:disintegration"
+    "oneironaut:rumination",
+    "oneironaut:disintegration"
   ]
 }

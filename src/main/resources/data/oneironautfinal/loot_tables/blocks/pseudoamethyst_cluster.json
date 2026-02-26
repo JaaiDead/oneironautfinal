@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "oneironautfinal:pseudoamethyst_cluster",
+              "name": "oneironaut:pseudoamethyst_cluster",
               "functions": [
                 {
                   "function": "minecraft:set_count",
@@ -39,7 +39,7 @@
               "children": [
                 {
                   "type": "minecraft:item",
-                  "name": "oneironautfinal:pseudoamethyst_shard",
+                  "name": "oneironaut:pseudoamethyst_shard",
                   "weight": 10,
                   "functions": [
                     {
@@ -71,7 +71,7 @@
                 },
                 {
                   "type": "minecraft:item",
-                  "name": "oneironautfinal:shifting_pseudoamethyst",
+                  "name": "oneironaut:shifting_pseudoamethyst",
                   "weight": 4,
                   "functions": [
                     {

@@ -3,7 +3,7 @@
   "criteria": {
     "entered_noosphere": {
       "conditions": {
-        "to": "oneironautfinal:noosphere"
+        "to": "oneironaut:noosphere"
       },
       "trigger": "minecraft:changed_dimension"
     }
@@ -11,16 +11,16 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "oneironautfinal.advancements.noosphere.enter.description"
+      "translate": "oneironaut.advancements.noosphere.enter.description"
     },
     "frame": "goal",
     "hidden": true,
     "icon": {
-      "item": "oneironautfinal:pseudoamethyst_block"
+      "item": "oneironaut:pseudoamethyst_block"
     },
     "show_toast": true,
     "title": {
-      "translate": "oneironautfinal.advancements.noosphere.enter"
+      "translate": "oneironaut.advancements.noosphere.enter"
     }
   },
   "requirements": [

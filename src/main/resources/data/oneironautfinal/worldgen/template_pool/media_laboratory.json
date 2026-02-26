@@ -1,12 +1,12 @@
 {
-  "name": "oneironautfinal:media_laboratory",
+  "name": "oneironaut:media_laboratory",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "oneironautfinal:media_laboratory",
+        "location": "oneironaut:media_laboratory",
         "projection": "rigid",
         "processors": "minecraft:empty"
       }

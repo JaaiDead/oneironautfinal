@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "oneironautfinal:echo_staff",
-    "oneironautfinal:beacon_staff",
-    "oneironautfinal:spoon_staff",
-    "oneironautfinal:circle",
+    "oneironaut:echo_staff",
+    "oneironaut:beacon_staff",
+    "oneironaut:spoon_staff",
+    "oneironaut:circle",
     "minecraft:debug_stick"
   ]
 }

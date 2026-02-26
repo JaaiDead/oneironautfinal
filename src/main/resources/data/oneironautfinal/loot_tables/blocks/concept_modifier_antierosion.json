@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:concept_modifier_antierosion"
+          "name": "oneironaut:concept_modifier_antierosion"
         }
       ],
       "rolls": 1.0

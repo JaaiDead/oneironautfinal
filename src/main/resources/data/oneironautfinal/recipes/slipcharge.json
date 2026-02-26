@@ -5,7 +5,7 @@
       "item": "hexcasting:slate_block"
     },
     "P": {
-      "item": "oneironautfinal:shifting_pseudoamethyst"
+      "item": "oneironaut:shifting_pseudoamethyst"
     },
     "T": {
       "item": "minecraft:tnt"
@@ -23,7 +23,7 @@
     "QSQ"
   ],
   "result": {
-    "item": "oneironautfinal:spacebomb",
+    "item": "oneironaut:spacebomb",
     "count": 1
   }
 }

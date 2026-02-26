@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:concept_modifier_gtp_drop"
+          "name": "oneironaut:concept_modifier_gtp_drop"
         }
       ],
       "rolls": 1.0

@@ -10,18 +10,18 @@
   ],
   "ingredients": [
     {
-      "item": "oneironautfinal:pseudoamethyst_cluster"
+      "item": "oneironaut:pseudoamethyst_cluster"
     }
   ],
   "processingTime": 150,
   "results": [
     {
       "count": 4,
-      "item": "oneironautfinal:pseudoamethyst_shard"
+      "item": "oneironaut:pseudoamethyst_shard"
     },
     {
       "chance": 0.4,
-      "item": "oneironautfinal:shifting_pseudoamethyst"
+      "item": "oneironaut:shifting_pseudoamethyst"
     }
   ]
 }

@@ -5,10 +5,10 @@
       "item": "hexcasting:battery"
     },
     "S": {
-      "item": "oneironautfinal:thought_slurry_bucket"
+      "item": "oneironaut:thought_slurry_bucket"
     },
     "B": {
-      "item": "oneironautfinal:super_budding"
+      "item": "oneironaut:super_budding"
     },
     "I": {
       "item": "minecraft:gold_ingot"
@@ -23,6 +23,6 @@
     "GPG"
   ],
   "result": {
-    "item": "oneironautfinal:endless_phial"
+    "item": "oneironaut:endless_phial"
   }
 }

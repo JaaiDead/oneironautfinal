@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "oneironautfinal:item/thought_slurry_bucket"
-  }
-}

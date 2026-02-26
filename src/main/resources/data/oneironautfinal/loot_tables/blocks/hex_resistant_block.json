@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:hex_resistant_block"
+          "name": "oneironaut:hex_resistant_block"
         }
       ],
       "rolls": 1.0

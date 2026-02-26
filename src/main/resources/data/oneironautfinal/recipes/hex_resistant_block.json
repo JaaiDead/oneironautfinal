@@ -5,7 +5,7 @@
       "item": "minecraft:obsidian"
     },
     "P": {
-      "item": "oneironautfinal:pseudoamethyst_shard"
+      "item": "oneironaut:pseudoamethyst_shard"
     }
   },
   "pattern": [
@@ -14,7 +14,7 @@
     " P "
   ],
   "result": {
-    "item": "oneironautfinal:hex_resistant_block",
+    "item": "oneironaut:hex_resistant_block",
     "count": 1
   }
 }

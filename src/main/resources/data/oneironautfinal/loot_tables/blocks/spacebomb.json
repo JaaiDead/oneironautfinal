@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:spacebomb"
+          "name": "oneironaut:spacebomb"
         }
       ],
       "rolls": 1.0

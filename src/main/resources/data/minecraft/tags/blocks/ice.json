@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "oneironautfinal:media_ice",
-    "oneironautfinal:media_ice_frosted"
+    "oneironaut:media_ice",
+    "oneironaut:media_ice_frosted"
   ]
 }

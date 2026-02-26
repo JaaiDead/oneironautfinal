@@ -5,7 +5,7 @@
       "item": "minecraft:glass"
     },
     "P": {
-      "item": "oneironautfinal:pseudoamethyst_shard"
+      "item": "oneironaut:pseudoamethyst_shard"
     }
   },
   "pattern": [
@@ -14,6 +14,6 @@
     " P "
   ],
   "result": {
-    "item": "oneironautfinal:raycast_blocker_glass"
+    "item": "oneironaut:raycast_blocker_glass"
   }
 }

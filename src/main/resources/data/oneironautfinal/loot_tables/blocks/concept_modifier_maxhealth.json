@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:concept_modifier_maxhealth"
+          "name": "oneironaut:concept_modifier_maxhealth"
         }
       ],
       "rolls": 1.0

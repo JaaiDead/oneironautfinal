@@ -1,5 +1,5 @@
 {
-  "parent": "oneironautfinal:enter_noosphere",
+  "parent": "oneironaut:enter_noosphere",
   "criteria": {
     "garden": {
       "conditions": {
@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "oneironautfinal:garden_island"
+                "structure": "oneironaut:garden_island"
               }
             }
           }
@@ -21,7 +21,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "oneironautfinal.advancements.noosphere.find_garden.description"
+      "translate": "oneironaut.advancements.noosphere.find_garden.description"
     },
     "frame": "task",
     "hidden": true,
@@ -30,7 +30,7 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "oneironautfinal.advancements.noosphere.find_garden"
+      "translate": "oneironaut.advancements.noosphere.find_garden"
     }
   },
   "requirements": [

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:raycast_blocker"
+          "name": "oneironaut:raycast_blocker"
         }
       ],
       "rolls": 1.0

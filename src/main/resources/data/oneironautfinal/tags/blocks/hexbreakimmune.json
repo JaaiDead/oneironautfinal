@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "oneironautfinal:hex_resistant_block",
-    "oneironautfinal:hover_elevator",
-    "oneironautfinal:deep_border"
+    "oneironaut:hex_resistant_block",
+    "oneironaut:hover_elevator",
+    "oneironaut:deep_border"
   ]
 }

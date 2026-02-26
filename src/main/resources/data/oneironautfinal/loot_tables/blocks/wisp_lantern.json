@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:wisp_lantern"
+          "name": "oneironaut:wisp_lantern"
         }
       ],
       "rolls": 1.0

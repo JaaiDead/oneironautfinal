@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:decorative_wisp_battery"
+          "name": "oneironaut:decorative_wisp_battery"
         }
       ],
       "rolls": 1.0

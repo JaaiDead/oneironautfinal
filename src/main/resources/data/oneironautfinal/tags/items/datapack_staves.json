@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "oneironautfinal:spoon_staff",
-    "oneironautfinal:circle",
+    "oneironaut:spoon_staff",
+    "oneironaut:circle",
     "minecraft:debug_stick"
   ]
 }

@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "M": {
-      "item": "oneironautfinal:concept_modifier_empty"
+      "item": "oneironaut:concept_modifier_empty"
     },
     "P": {
-      "item": "oneironautfinal:shifting_pseudoamethyst"
+      "item": "oneironaut:shifting_pseudoamethyst"
     },
     "Q": {
       "item": "hexcasting:quenched_allay"
@@ -20,6 +20,6 @@
     "PNP"
   ],
   "result": {
-    "item": "oneironautfinal:concept_modifier_antierosion"
+    "item": "oneironaut:concept_modifier_antierosion"
   }
 }

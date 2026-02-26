@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "oneironautfinal:shifting_pseudoamethyst"
+      "item": "oneironaut:shifting_pseudoamethyst"
     },
     {
       "item": "hexcasting:amethyst_dust"

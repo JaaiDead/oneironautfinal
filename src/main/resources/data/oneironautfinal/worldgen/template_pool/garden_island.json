@@ -1,12 +1,12 @@
 {
-  "name": "oneironautfinal:garden_island",
+  "name": "oneironaut:garden_island",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "oneironautfinal:garden_island",
+        "location": "oneironaut:garden_island",
         "projection": "rigid",
         "processors": "minecraft:empty"
       }

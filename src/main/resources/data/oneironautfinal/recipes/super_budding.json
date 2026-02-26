@@ -2,7 +2,7 @@
   "type": "hexcasting:brainsweep",
   "blockIn": {
     "type": "block",
-    "block": "oneironautfinal:pseudoamethyst_block"
+    "block": "oneironaut:pseudoamethyst_block"
   },
   "cost": 1000000,
   "entityIn": {
@@ -10,6 +10,6 @@
     "minLevel": 5
   },
   "result": {
-    "name": "oneironautfinal:super_budding"
+    "name": "oneironaut:super_budding"
   }
 }

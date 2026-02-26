@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "S": {
-      "item": "oneironautfinal:shifting_pseudoamethyst"
+      "item": "oneironaut:shifting_pseudoamethyst"
     },
     "P": {
-      "item": "oneironautfinal:pseudoamethyst_shard"
+      "item": "oneironaut:pseudoamethyst_shard"
     },
     "B": {
       "item": "hexcasting:slate_block"
     },
     "H": {
-      "item": "oneironautfinal:hex_resistant_block"
+      "item": "oneironaut:hex_resistant_block"
     }
   },
   "pattern": [
@@ -20,7 +20,7 @@
     "BPB"
   ],
   "result": {
-    "item": "oneironautfinal:slipwaysuppressor",
+    "item": "oneironaut:slipwaysuppressor",
     "count": 1
   }
 }

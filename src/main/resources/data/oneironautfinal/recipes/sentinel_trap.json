@@ -8,10 +8,10 @@
       "item": "hexcasting:impetus/redstone"
     },
     "S": {
-      "item": "oneironautfinal:sentinel_sensor"
+      "item": "oneironaut:sentinel_sensor"
     },
     "P": {
-      "item": "oneironautfinal:shifting_pseudoamethyst"
+      "item": "oneironaut:shifting_pseudoamethyst"
     }
   },
   "pattern": [
@@ -20,6 +20,6 @@
     "BCB"
   ],
   "result": {
-    "item": "oneironautfinal:sentinel_trap"
+    "item": "oneironaut:sentinel_trap"
   }
 }

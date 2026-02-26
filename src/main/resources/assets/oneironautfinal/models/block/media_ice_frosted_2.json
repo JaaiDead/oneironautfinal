@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "oneironautfinal:block/media_ice_frosted_2"
-  }
-}

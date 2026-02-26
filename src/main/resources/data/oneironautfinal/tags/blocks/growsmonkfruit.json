@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "oneironautfinal:thought_slurry",
-    "oneironautfinal:super_budding",
+    "oneironaut:thought_slurry",
+    "oneironaut:super_budding",
     "minecraft:budding_amethyst"
   ]
 }

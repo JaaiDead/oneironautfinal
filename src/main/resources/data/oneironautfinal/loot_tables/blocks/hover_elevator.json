@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:hover_elevator"
+          "name": "oneironaut:hover_elevator"
         }
       ],
       "rolls": 1.0

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:media_gel"
+          "name": "oneironaut:media_gel"
         }
       ],
       "rolls": 1.0

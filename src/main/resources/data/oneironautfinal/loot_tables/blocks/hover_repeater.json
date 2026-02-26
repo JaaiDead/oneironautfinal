@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:hover_repeater"
+          "name": "oneironaut:hover_repeater"
         }
       ],
       "rolls": 1.0

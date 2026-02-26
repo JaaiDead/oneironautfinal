@@ -5,7 +5,7 @@
       "item": "hexcasting:slate_block"
     },
     "P": {
-      "item": "oneironautfinal:pseudoamethyst_block"
+      "item": "oneironaut:pseudoamethyst_block"
     },
     "S": {
       "item": "minecraft:sculk_sensor"
@@ -17,6 +17,6 @@
     "BBB"
   ],
   "result": {
-    "item": "oneironautfinal:sentinel_sensor"
+    "item": "oneironaut:sentinel_sensor"
   }
 }

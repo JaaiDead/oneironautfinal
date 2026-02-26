@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "oneironautfinal:wisp_lantern",
-    "oneironautfinal:wisp_lantern_tinted"
+    "oneironaut:wisp_lantern",
+    "oneironaut:wisp_lantern_tinted"
   ]
 }

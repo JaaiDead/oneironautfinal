@@ -8,10 +8,10 @@
       "item": "hexcasting:slate_block"
     },
     "A": {
-      "item": "oneironautfinal:pseudoamethyst_block"
+      "item": "oneironaut:pseudoamethyst_block"
     },
     "W": {
-      "tag": "oneironautfinal:wisp_lanterns"
+      "tag": "oneironaut:wisp_lanterns"
     }
   },
   "pattern": [
@@ -20,6 +20,6 @@
     "SSS"
   ],
   "result": {
-    "item": "oneironautfinal:wisp_battery"
+    "item": "oneironaut:wisp_battery"
   }
 }

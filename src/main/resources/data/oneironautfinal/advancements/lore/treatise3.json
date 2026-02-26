@@ -1,5 +1,5 @@
 {
-  "parent": "oneironautfinal:lore/root",
+  "parent": "oneironaut:lore/root",
   "criteria": {
     "grant": {
       "trigger": "minecraft:impossible"
@@ -8,16 +8,16 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "oneironautfinal.advancements.lore.treatise3.description"
+      "translate": "oneironaut.advancements.lore.treatise3.description"
     },
     "frame": "task",
     "hidden": true,
     "icon": {
-      "item": "oneironautfinal:memory_fragment"
+      "item": "oneironaut:memory_fragment"
     },
     "show_toast": true,
     "title": {
-      "translate": "oneironautfinal.advancements.lore.treatise3"
+      "translate": "oneironaut.advancements.lore.treatise3"
     }
   },
   "requirements": [

@@ -8,10 +8,10 @@
       "item": "hexcasting:edified_planks"
     },
     "A": {
-      "item": "oneironautfinal:pseudoamethyst_block"
+      "item": "oneironaut:pseudoamethyst_block"
     },
     "B": {
-      "item": "oneironautfinal:noosphere_basalt"
+      "item": "oneironaut:noosphere_basalt"
     }
   },
   "pattern": [
@@ -20,6 +20,6 @@
     "GBG"
   ],
   "result": {
-    "item": "oneironautfinal:wisp_lantern_tinted"
+    "item": "oneironaut:wisp_lantern_tinted"
   }
 }

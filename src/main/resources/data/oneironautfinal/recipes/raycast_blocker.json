@@ -5,7 +5,7 @@
       "item": "hexcasting:slate_block"
     },
     "P": {
-      "item": "oneironautfinal:pseudoamethyst_shard"
+      "item": "oneironaut:pseudoamethyst_shard"
     }
   },
   "pattern": [
@@ -14,6 +14,6 @@
     " P "
   ],
   "result": {
-    "item": "oneironautfinal:raycast_blocker"
+    "item": "oneironaut:raycast_blocker"
   }
 }

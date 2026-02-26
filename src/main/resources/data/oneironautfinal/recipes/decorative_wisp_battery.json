@@ -8,10 +8,10 @@
       "item": "hexcasting:edified_planks"
     },
     "A": {
-      "item": "oneironautfinal:pseudoamethyst_block"
+      "item": "oneironaut:pseudoamethyst_block"
     },
     "W": {
-      "tag": "oneironautfinal:wisp_lanterns"
+      "tag": "oneironaut:wisp_lanterns"
     }
   },
   "pattern": [
@@ -20,6 +20,6 @@
     "EEE"
   ],
   "result": {
-    "item": "oneironautfinal:decorative_wisp_battery"
+    "item": "oneironaut:decorative_wisp_battery"
   }
 }

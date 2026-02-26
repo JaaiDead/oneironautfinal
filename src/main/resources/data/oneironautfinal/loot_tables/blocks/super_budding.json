@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "oneironautfinal:super_budding"
+              "name": "oneironaut:super_budding"
             },
             {
               "type": "minecraft:item",
@@ -57,7 +57,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "oneironautfinal:pseudoamethyst_shard"
+              "name": "oneironaut:pseudoamethyst_shard"
             }
           ]
         }

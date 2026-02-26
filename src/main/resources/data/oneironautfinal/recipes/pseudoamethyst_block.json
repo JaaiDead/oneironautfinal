@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "S": {
-      "item": "oneironautfinal:pseudoamethyst_shard"
+      "item": "oneironaut:pseudoamethyst_shard"
     }
   },
   "pattern": [
@@ -10,6 +10,6 @@
     "SS"
   ],
   "result": {
-    "item": "oneironautfinal:pseudoamethyst_block"
+    "item": "oneironaut:pseudoamethyst_block"
   }
 }

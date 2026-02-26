@@ -8,7 +8,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "oneironautfinal.advancements.unflay.description"
+      "translate": "oneironaut.advancements.unflay.description"
     },
     "frame": "task",
     "hidden": true,
@@ -17,7 +17,7 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "oneironautfinal.advancements.unflay"
+      "translate": "oneironaut.advancements.unflay"
     }
   },
   "requirements": [

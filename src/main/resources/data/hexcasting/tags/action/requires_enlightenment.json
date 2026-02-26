@@ -1,16 +1,16 @@
 {
   "replace": false,
   "values": [
-    "oneironautfinal:getdim/nether",
-    "oneironautfinal:writeidea",
-    "oneironautfinal:dimteleport",
-    "oneironautfinal:infusemedia",
-    "oneironautfinal:swapspace",
-    "oneironautfinal:resistdetection",
-    "oneironautfinal:applynotmissing",
-    "oneironautfinal:applymindrender",
-    "oneironautfinal:reviveflayed",
-    "oneironautfinal:extradimensionaleval",
-    "oneironautfinal:erosionshield"
+    "oneironaut:getdim/nether",
+    "oneironaut:writeidea",
+    "oneironaut:dimteleport",
+    "oneironaut:infusemedia",
+    "oneironaut:swapspace",
+    "oneironaut:resistdetection",
+    "oneironaut:applynotmissing",
+    "oneironaut:applymindrender",
+    "oneironaut:reviveflayed",
+    "oneironaut:extradimensionaleval",
+    "oneironaut:erosionshield"
   ]
 }

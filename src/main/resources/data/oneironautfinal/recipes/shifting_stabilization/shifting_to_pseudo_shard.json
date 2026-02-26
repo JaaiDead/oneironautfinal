@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "oneironautfinal:shifting_pseudoamethyst"
+      "item": "oneironaut:shifting_pseudoamethyst"
     },
     {
-      "item": "oneironautfinal:pseudoamethyst_shard"
+      "item": "oneironaut:pseudoamethyst_shard"
     }
   ],
   "result": {
     "count": 5,
-    "item": "oneironautfinal:pseudoamethyst_shard"
+    "item": "oneironaut:pseudoamethyst_shard"
   }
 }

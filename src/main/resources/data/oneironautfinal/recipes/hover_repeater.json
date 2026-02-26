@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "P": {
-      "item": "oneironautfinal:pseudoamethyst_shard"
+      "item": "oneironaut:pseudoamethyst_shard"
     },
     "M": {
       "item": "minecraft:phantom_membrane"
@@ -23,7 +23,7 @@
     "BXB"
   ],
   "result": {
-    "item": "oneironautfinal:hover_repeater",
+    "item": "oneironaut:hover_repeater",
     "count": 3
   }
 }

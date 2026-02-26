@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "P": {
-      "item": "oneironautfinal:pseudoamethyst_block"
+      "item": "oneironaut:pseudoamethyst_block"
     },
     "M": {
       "item": "minecraft:phantom_membrane"
     },
     "O": {
-      "item": "oneironautfinal:hex_resistant_block"
+      "item": "oneironaut:hex_resistant_block"
     },
     "S": {
       "item": "hexcasting:slate_block"
@@ -23,6 +23,6 @@
     "SCS"
   ],
   "result": {
-    "item": "oneironautfinal:hover_elevator"
+    "item": "oneironaut:hover_elevator"
   }
 }

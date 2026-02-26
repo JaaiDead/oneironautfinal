@@ -8,16 +8,16 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "oneironautfinal.advancements.ouchie.description"
+      "translate": "oneironaut.advancements.ouchie.description"
     },
     "frame": "task",
     "hidden": true,
     "icon": {
-      "item": "oneironautfinal:rending_thorns"
+      "item": "oneironaut:rending_thorns"
     },
     "show_toast": true,
     "title": {
-      "translate": "oneironautfinal.advancements.ouchie"
+      "translate": "oneironaut.advancements.ouchie"
     }
   },
   "requirements": [

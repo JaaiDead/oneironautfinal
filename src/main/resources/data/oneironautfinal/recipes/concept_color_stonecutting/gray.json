@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "tag": "oneironautfinal:conceptdecorators"
+    "tag": "oneironaut:conceptdecorators"
   },
-  "result": "oneironautfinal:concept_decorator_color/gray",
+  "result": "oneironaut:concept_decorator_color/gray",
   "count": 1
 }

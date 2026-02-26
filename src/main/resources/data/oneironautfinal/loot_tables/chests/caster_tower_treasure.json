@@ -341,7 +341,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "oneironautfinal:pseudoamethyst_shard",
+          "name": "oneironaut:pseudoamethyst_shard",
           "weight": 15
         },
         {
@@ -405,7 +405,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "oneironautfinal:memory_fragment",
+          "name": "oneironaut:memory_fragment",
           "weight": 25
         }
       ],

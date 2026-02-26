@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironautfinal:concept_modifier_stack_size"
+          "name": "oneironaut:concept_modifier_stack_size"
         }
       ],
       "rolls": 1.0

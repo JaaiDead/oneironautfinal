@@ -11,11 +11,11 @@
       "item": "minecraft:paper"
     },
     {
-      "item": "oneironautfinal:endless_phial"
+      "item": "oneironaut:endless_phial"
     }
   ],
   "result": {
     "count": 1,
-    "item": "oneironautfinal:bottomless_trinket"
+    "item": "oneironaut:bottomless_trinket"
   }
 }

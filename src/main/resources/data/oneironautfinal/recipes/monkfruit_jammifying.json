@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "oneironautfinal:monkfruit_cooked"
+      "item": "oneironaut:monkfruit_cooked"
     },
     {
       "item": "minecraft:sugar"
@@ -15,6 +15,6 @@
     }
   ],
   "result": {
-    "item": "oneironautfinal:hexjam"
+    "item": "oneironaut:hexjam"
   }
 }

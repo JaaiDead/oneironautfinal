@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "T": {
-      "item": "oneironautfinal:rending_thorns"
+      "item": "oneironaut:rending_thorns"
     },
     "S": {
       "item": "minecraft:netherite_scrap"
@@ -17,6 +17,6 @@
     " S"
   ],
   "result": {
-    "item": "oneironautfinal:mind_scalpel"
+    "item": "oneironaut:mind_scalpel"
   }
 }

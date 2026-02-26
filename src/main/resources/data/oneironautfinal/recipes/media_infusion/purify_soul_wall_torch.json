@@ -1,5 +1,5 @@
 {
-  "type": "oneironautfinal:infuse",
+  "type": "oneironaut:infuse",
   "blockIn": {
     "type": "block",
     "block": "minecraft:soul_wall_torch"

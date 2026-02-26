@@ -209,7 +209,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "oneironautfinal:pseudoamethyst_shard",
+          "name": "oneironaut:pseudoamethyst_shard",
           "weight": 15
         }
       ],
