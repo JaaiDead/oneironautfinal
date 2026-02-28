@@ -10,11 +10,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.fluids.FluidType;
 import org.arcticquests.dev.oneironaut.oneironautt.Oneironaut;
 import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautFluidTypes;
@@ -25,6 +28,8 @@ public class ThoughtSlurry extends FlowingFluid {
     public static final ResourceLocation ID = ResourceLocation.tryBuild(Oneironaut.MODID, "thought_slurry");
     public static final ResourceLocation FLOWING_ID = ResourceLocation.tryBuild(Oneironaut.MODID, "flowing_thought_slurry");
     public static final TagKey<Fluid> TAG = TagKey.create(net.minecraft.core.registries.Registries.FLUID, ThoughtSlurry.ID);
+    public static final BlockBehaviour.Properties SETTINGS =
+            BlockBehaviour.Properties.copy(Blocks.WATER).noOcclusion().mapColor(MapColor.COLOR_PURPLE);
 
     @Override
     public boolean isSame(Fluid fluid) {

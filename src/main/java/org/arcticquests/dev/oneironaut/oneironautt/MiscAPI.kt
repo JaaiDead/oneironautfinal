@@ -345,53 +345,33 @@ fun vecProximity(a: Vec3, b: Vec3): Double {
 fun vecProximity(a: Direction, b: Vec3): Double {
     return vecProximity(Vec3.atLowerCornerOf(a.normal), b)
 }
-
+private const val DECORATIVE_KEY = "oneironaut:decorative"
 private const val BRAINSWEPT_KEY = "oneironaut:brainswept"
-
 fun Mob.setBrainsweptForge(value: Boolean) {
     this.persistentData.putBoolean(BRAINSWEPT_KEY, value)
 }
-
 fun Mob.isBrainsweptForge(): Boolean =
     this.persistentData.getBoolean(BRAINSWEPT_KEY)
 
+var Entity.isDecorative: Boolean
+    get() = this.persistentData.getBoolean(DECORATIVE_KEY)
+    set(value) { this.persistentData.putBoolean(DECORATIVE_KEY, value) }
+
 fun Mob.unbrainsweep() {
-    val patient = this
-
-    // Server should be authoritative; send your packet from server to nearby clients.
-    if (!patient.level().isClientSide) {
-        IXplatAbstractions.INSTANCE.sendPacketNear(
-            patient.position(),
-            256.0,
-            patient.level() as ServerLevel,
-            UnBrainsweepPacket(patient.id)
-        )
-        patient.setBrainsweptForge(false)
-    }
-
-    patient.setNoAi(false)
-
-    val brain = patient.brain
-    try {
-        val gs = GoalSelector(patient.level().profilerSupplier)
-        val field = Mob::class.java.getDeclaredField("goalSelector")
-        field.isAccessible = true
-        field.set(patient, gs)
-    } catch (e: Exception) {
-        Oneironaut.LOGGER.warn("Failed to replace goalSelector via reflection:", e)
-    }
+    this.setBrainsweptForge(false)
+    this.setNoAi(false)
+    val brain = this.brain
     brain.useDefaultActivity()
-    brain.updateActivityFromSchedule(patient.level().dayTime, patient.level().gameTime)
-
-    if (patient is VillagerDataHolder) {
-        val newData = patient.villagerData.setLevel(0).setProfession(VillagerProfession.NITWIT)
-        patient.villagerData = newData
+    brain.updateActivityFromSchedule(this.level().dayTime, this.level().gameTime)
+    if (this is VillagerDataHolder){
+        val newData = this.villagerData.setLevel(0).setProfession(VillagerProfession.NITWIT)
+        this.villagerData = newData
     }
-
-    // Refresh NBT (if still required for your logic)
-    val refreshNBT = patient.saveWithoutId(CompoundTag())
-    patient.load(refreshNBT)
+    val refreshNBT = this.saveWithoutId(CompoundTag())
+    this.load(refreshNBT)
 }
+
+
 fun AABB.longestAxisLength() : Double{
     val x = this.xsize
     val y = this.ysize

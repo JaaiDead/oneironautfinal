@@ -1,4 +1,4 @@
-
+package org.arcticquests.dev.oneironaut.oneironautt.network
 import at.petrak.hexcasting.common.msgs.IMessage
 import io.netty.buffer.ByteBuf
 import net.minecraft.client.Minecraft
@@ -21,7 +21,7 @@ class ItemUpdatePacket(val stack : ItemStack, val entity : Entity?) : IMessage {
 
     companion object {
         @JvmField
-        val ID: ResourceLocation = ResourceLocation(Oneironaut.MODID, "itemupdate")
+        val ID: ResourceLocation = ResourceLocation.fromNamespaceAndPath(Oneironaut.MODID, "itemupdate")
 
         @JvmStatic
         fun deserialise(buffer: ByteBuf): ItemUpdatePacket {

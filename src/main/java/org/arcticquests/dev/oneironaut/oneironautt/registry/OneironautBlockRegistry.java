@@ -97,10 +97,10 @@ public final class OneironautBlockRegistry {
                     BlockEntityType.Builder.of(WispLanternEntityTinted::new, WISP_LANTERN_TINTED.get()).build(null));
 
 
-    public static final RegistryObject<LiquidBlock> THOUGHT_SLURRY_BLOCK = BLOCKS.register("thought_slurry",
-            () -> new LiquidBlock(
+    public static final RegistryObject<ThoughtSlurryBlock> THOUGHT_SLURRY_BLOCK = BLOCKS.register("thought_slurry",
+            () -> new ThoughtSlurryBlock(
                     OneironautMiscRegistry.THOUGHT_SLURRY,
-                    net.minecraft.world.level.block.state.BlockBehaviour.Properties
+                   BlockBehaviour.Properties
                             .copy(Blocks.WATER)
                             .noOcclusion()
                             .mapColor(MapColor.COLOR_PURPLE)

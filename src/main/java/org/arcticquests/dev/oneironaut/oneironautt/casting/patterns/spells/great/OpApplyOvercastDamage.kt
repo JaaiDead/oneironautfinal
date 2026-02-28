@@ -1,6 +1,6 @@
 package org.arcticquests.dev.oneironaut.oneironautt.casting.patterns.spells.great
 
-import ItemUpdatePacket
+import org.arcticquests.dev.oneironaut.oneironautt.network.ItemUpdatePacket
 import at.petrak.hexcasting.api.casting.ParticleSpray
 import at.petrak.hexcasting.api.casting.RenderedSpell
 import at.petrak.hexcasting.api.casting.castables.SpellAction

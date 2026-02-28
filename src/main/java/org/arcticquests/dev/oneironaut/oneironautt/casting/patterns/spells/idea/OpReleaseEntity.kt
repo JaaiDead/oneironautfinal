@@ -16,6 +16,7 @@ import org.arcticquests.dev.oneironaut.oneironautt.casting.idea.IdeaEntry
 import org.arcticquests.dev.oneironaut.oneironautt.casting.idea.IdeaInscriptionManager
 import org.arcticquests.dev.oneironaut.oneironautt.colorToClosestPigment
 import org.arcticquests.dev.oneironaut.oneironautt.getIdeaKey
+import org.arcticquests.dev.oneironaut.oneironautt.isDecorative
 import ram.talia.hexal.common.entities.WanderingWisp
 
 class OpReleaseEntity : ConstMediaAction {
@@ -40,10 +41,8 @@ class OpReleaseEntity : ConstMediaAction {
                     )
                 )
             }
-  /*          val decorative = OneironautComponents.WISP_DECORATIVE
-            decorative[out].value = true*/
+            out.isDecorative = true
             env.world.addFreshEntity(out)
-            out
         } else {
             null
         }

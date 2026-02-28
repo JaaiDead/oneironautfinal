@@ -22,7 +22,7 @@ public class ThoughtSlurryBlock extends LiquidBlock {
             Properties.copy(Blocks.WATER).noOcclusion().mapColor(MapColor.COLOR_PURPLE);
 
     public ThoughtSlurryBlock(Supplier<? extends FlowingFluid> fluidSupplier, Properties properties) {
-        super(fluidSupplier, properties);
+        super(fluidSupplier, SETTINGS);
     }
 
     @Override

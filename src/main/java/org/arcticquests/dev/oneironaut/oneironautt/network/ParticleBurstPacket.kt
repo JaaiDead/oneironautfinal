@@ -38,7 +38,7 @@ class ParticleBurstPacket(val origin : Vec3, val direction : Vec3, val posRandom
 
     companion object {
         @JvmField
-        val ID: ResourceLocation = ResourceLocation(Oneironaut.MODID, "particleburst")
+        val ID: ResourceLocation = ResourceLocation.fromNamespaceAndPath(Oneironaut.MODID, "particleburst")
 
         @JvmStatic
         fun deserialise(buffer: ByteBuf): ParticleBurstPacket {

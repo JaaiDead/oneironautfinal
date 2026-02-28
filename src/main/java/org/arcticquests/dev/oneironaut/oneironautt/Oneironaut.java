@@ -39,6 +39,7 @@ import org.arcticquests.dev.oneironaut.oneironautt.casting.conceptmodification.C
 import org.arcticquests.dev.oneironaut.oneironautt.casting.conceptmodification.ConceptModifierManager;
 import org.arcticquests.dev.oneironaut.oneironautt.casting.idea.IdeaInscriptionManager;
 import org.arcticquests.dev.oneironaut.oneironautt.item.BottomlessMediaItem;
+import org.arcticquests.dev.oneironaut.oneironautt.network.OneironautNetwork;
 import org.arcticquests.dev.oneironaut.oneironautt.recipe.OneironautRecipesForge;
 import org.arcticquests.dev.oneironaut.oneironautt.registry.*;
 import org.arcticquests.dev.oneironaut.oneironautt.status.MediaDisintegrationEffect;
@@ -85,7 +86,9 @@ public class Oneironaut {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(OneironautNetwork::register);
         event.enqueueWork(() -> {
+
             OneironautIotaTypeRegistry.init();
             OneironautPatternRegistry.init();
             ModLoadingContext.get().registerConfig(
