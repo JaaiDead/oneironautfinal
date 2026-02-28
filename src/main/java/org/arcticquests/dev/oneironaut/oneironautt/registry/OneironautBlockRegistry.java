@@ -10,10 +10,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.AmethystClusterBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -51,7 +48,6 @@ public final class OneironautBlockRegistry {
         BLOCK_ENTITIES.register(modBus);
     }
 
-    // --- Basic blocks ---
     public static final RegistryObject<Block> PSUEDOAMETHYST_BLOCK = BLOCKS.register("pseudoamethyst_block", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)
                     .destroyTime(1.5f)
@@ -73,7 +69,6 @@ public final class OneironautBlockRegistry {
                     .lightLevel(state -> 5)
                     .noOcclusion()));
 
-    // --- Noosphere gate ---
     public static final RegistryObject<NoosphereGateway> NOOSPHERE_GATE = BLOCKS.register("noosphere_gate", () ->
             new NoosphereGateway(BlockBehaviour.Properties.copy(Blocks.END_PORTAL)
                     .lightLevel(state -> 15)
@@ -84,7 +79,6 @@ public final class OneironautBlockRegistry {
             BLOCK_ENTITIES.register("noosphere_gate_entity", () ->
                     BlockEntityType.Builder.of(NoosphereGateEntity::new, NOOSPHERE_GATE.get()).build(null));
 
-    // --- Wisp lantern ---
     public static final RegistryObject<WispLantern> WISP_LANTERN = BLOCKS.register("wisp_lantern", () ->
             new WispLantern(BlockBehaviour.Properties.copy(Blocks.GLASS)
                     .lightLevel(state -> 15)
@@ -102,11 +96,17 @@ public final class OneironautBlockRegistry {
             BLOCK_ENTITIES.register("wisp_lantern_entity_tinted", () ->
                     BlockEntityType.Builder.of(WispLanternEntityTinted::new, WISP_LANTERN_TINTED.get()).build(null));
 
-    // --- Thought slurry ---
-    public static final RegistryObject<ThoughtSlurryBlock> THOUGHT_SLURRY_BLOCK =
-            BLOCKS.register("thought_slurry", () -> ThoughtSlurryBlock.INSTANCE);
 
-    // --- Misc ---
+    public static final RegistryObject<LiquidBlock> THOUGHT_SLURRY_BLOCK = BLOCKS.register("thought_slurry",
+            () -> new LiquidBlock(
+                    OneironautMiscRegistry.THOUGHT_SLURRY,
+                    net.minecraft.world.level.block.state.BlockBehaviour.Properties
+                            .copy(Blocks.WATER)
+                            .noOcclusion()
+                            .mapColor(MapColor.COLOR_PURPLE)
+            )
+    );
+
     public static final RegistryObject<SuperBuddingBlock> SUPER_BUDDING =
             BLOCKS.register("super_budding", () -> new SuperBuddingBlock(BlockBehaviour.Properties.copy(Blocks.BUDDING_AMETHYST)));
 
@@ -176,7 +176,6 @@ public final class OneironautBlockRegistry {
             BLOCK_ENTITIES.register("decorative_wisp_battery_entity", () ->
                     BlockEntityType.Builder.of(WispBatteryEntityFake::new, WISP_BATTERY_DECORATIVE.get()).build(null));
 
-    // --- Edified tree spawner ---
     public static final RegistryObject<EdifiedTreeSpawnerBlock> EDIFIED_TREE_SPAWNER =
             BLOCKS.register("edified_tree_spawner", () -> new EdifiedTreeSpawnerBlock(BlockBehaviour.Properties.copy(Blocks.AIR)));
 
@@ -184,7 +183,6 @@ public final class OneironautBlockRegistry {
             BLOCK_ENTITIES.register("edified_tree_spawner_entity", () ->
                     BlockEntityType.Builder.of(EdifiedTreeSpawnerBlockEntity::new, EDIFIED_TREE_SPAWNER.get()).build(null));
 
-    // --- Hover elevator ---
     public static final RegistryObject<HoverElevatorBlock> HOVER_ELEVATOR =
             BLOCKS.register("hover_elevator", () ->
                     new HoverElevatorBlock(BlockBehaviour.Properties.copy(HexBlocks.SLATE_BLOCK)
@@ -205,7 +203,6 @@ public final class OneironautBlockRegistry {
                             .noOcclusion()
                             .noCollission()));
 
-    // --- Pseudoamethyst buds ---
     public static final RegistryObject<AmethystClusterBlock> PSEUDOAMETHYST_CLUSTER =
             BLOCKS.register("pseudoamethyst_cluster", () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)));
 
@@ -218,7 +215,6 @@ public final class OneironautBlockRegistry {
     public static final RegistryObject<AmethystClusterBlock> PSEUDOAMETHYST_BUD_SMALL =
             BLOCKS.register("pseudoamethyst_bud_small", () -> new AmethystClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD)));
 
-    // --- Space bomb ---
     public static final RegistryObject<SpaceBombBlock> SPACE_BOMB =
             BLOCKS.register("spacebomb", () ->
                     new SpaceBombBlock(BlockBehaviour.Properties.copy(Blocks.RESPAWN_ANCHOR)
@@ -246,7 +242,6 @@ public final class OneironautBlockRegistry {
             BLOCKS.register("deep_border", () ->
                     new DeepNoosphereFloorBlock(BlockBehaviour.Properties.copy(Blocks.BEDROCK).noParticlesOnBreak().mapColor(MapColor.ICE)));
 
-    // --- Concept blocks ---
     public static final RegistryObject<ConceptCoreBlock> CONCEPT_CORE =
             BLOCKS.register("concept_core", () -> new ConceptCoreBlock(BlockBehaviour.Properties.copy(HexBlocks.SLATE_BLOCK)));
 
@@ -269,7 +264,6 @@ public final class OneironautBlockRegistry {
     public static final Map<DyeColor, RegistryObject<ConceptDecoratorBlock>> COLORFUL_CONCEPT_MODIFIERS = new EnumMap<>(DyeColor.class);
     static {
         for (DyeColor color : DyeColor.values()) {
-            // IMPORTANT: avoid "/" in registry names on Forge
             String name = "concept_decorator_color_" + color.getName();
             RegistryObject<ConceptDecoratorBlock> ro =
                     BLOCKS.register(name, () -> new ConceptDecoratorBlock(CONCEPT_MODIFIER_SETTINGS.get()));
@@ -327,7 +321,6 @@ public final class OneironautBlockRegistry {
                     CONCEPT_MODIFIER_STACK_SIZE.get()
             ).build(null));
 
-    // --- Transforming skull ---
     public static final RegistryObject<TranformingSkullBlock> TRANFORMING_SKULL =
             BLOCKS.register("transformingskull", () -> new TranformingSkullBlock(BlockBehaviour.Properties.copy(Blocks.ZOMBIE_HEAD)));
 
@@ -338,7 +331,6 @@ public final class OneironautBlockRegistry {
             BLOCK_ENTITIES.register("transformingskull_entity", () ->
                     BlockEntityType.Builder.of(TransformingSkullBlockEntity::new, TRANFORMING_SKULL.get(), TRANFORMING_WALL_SKULL.get()).build(null));
 
-    // --- Instant breaker ---
     public static final BlockBehaviour.Properties INSTANT_BREAKER_SETTINGS =
             BlockBehaviour.Properties.of()
                     .strength(-1.0F, 3600000.8F)
@@ -355,15 +347,12 @@ public final class OneironautBlockRegistry {
             BLOCK_ENTITIES.register("instant_breaker_entity", () ->
                     BlockEntityType.Builder.of(InstantBreakingBlockEntity::new, INSTANT_BREAKER_RIFTRESIDUE.get()).build(null));
 
-    // mostly just stolen from the vanilla class since it's private in there
-    protected static ToIntFunction<BlockState> createLightLevelFromBoolBlockState(BooleanProperty property, int litLevel) {
+    private static ToIntFunction<BlockState> createLightLevelFromBoolBlockState(BooleanProperty property, int litLevel) {
         return state -> state.getValue(property) ? litLevel : 0;
     }
 
-    // used for the eternal chorus mixin
     public static final BooleanProperty ETERNAL = BooleanProperty.create("eternal");
 
-    // If you keep these helpers, make sure you only call them during mod init (not at static init elsewhere)
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return OneironautItemRegistry.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }

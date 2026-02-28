@@ -12,8 +12,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import org.arcticquests.dev.oneironaut.oneironautt.block.ThoughtSlurry;
 import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautBlockRegistry;
+import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautMiscRegistry;
 
 import static org.arcticquests.dev.oneironaut.oneironautt.MiscAPIKt.genCircle;
 
@@ -43,7 +43,8 @@ public class NoosphereSeaIsland extends Feature<NoosphereSeaIslandConfig> {
         if (true){
             for (int y = origin.getY(); y < 32; y++){
                 scanPos = scanPos.above();
-                if ((world.getFluidState(scanPos).getType().equals(ThoughtSlurry.STILL_FLUID) && world.getBlockState(scanPos.above()).isAir())){
+                if ((world.getFluidState(scanPos).getType() == OneironautMiscRegistry.THOUGHT_SLURRY.get()
+                        && world.getBlockState(scanPos.above()).isAir())) {
                     BlockPos surfaceCenter = scanPos.above();
                     //make a small basalt island
                     Block[] replaceable = new Block[]{

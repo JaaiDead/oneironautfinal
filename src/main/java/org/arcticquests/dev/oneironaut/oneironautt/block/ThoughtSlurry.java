@@ -1,9 +1,7 @@
 package org.arcticquests.dev.oneironaut.oneironautt.block;
 
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -12,41 +10,26 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraftforge.fluids.FluidType;
 import org.arcticquests.dev.oneironaut.oneironautt.Oneironaut;
+import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautFluidTypes;
 import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautItemRegistry;
 import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautMiscRegistry;
 
-
 public class ThoughtSlurry extends FlowingFluid {
+    public static final ResourceLocation ID = ResourceLocation.tryBuild(Oneironaut.MODID, "thought_slurry");
+    public static final ResourceLocation FLOWING_ID = ResourceLocation.tryBuild(Oneironaut.MODID, "flowing_thought_slurry");
+    public static final TagKey<Fluid> TAG = TagKey.create(net.minecraft.core.registries.Registries.FLUID, ThoughtSlurry.ID);
+
     @Override
     public boolean isSame(Fluid fluid) {
         return fluid == getSource() || fluid == getFlowing();
     }
-    public static final ResourceLocation ID =
-            ResourceLocation.tryBuild(Oneironaut.MODID, "thought_slurry");
-
-
-
-    public static final ResourceLocation FLOWING_ID =
-            ResourceLocation.tryBuild(Oneironaut.MODID, "flowing_thought_slurry");
-
-    public static final Flowing FLOWING_FLUID =
-            new Flowing();
-    public static final Still STILL_FLUID =
-            new Still();
-
-    //public static FlowableFluid THOUGHT_SLURRY;
-    //public static FlowableFluid THOUGHT_SLURRY_FLOWING;
-
-    public static final TagKey<Fluid> TAG =
-            TagKey.create(Registries.FLUID, ThoughtSlurry.ID);
 
     @Override
     public Fluid getFlowing() {
@@ -58,20 +41,10 @@ public class ThoughtSlurry extends FlowingFluid {
         return OneironautMiscRegistry.THOUGHT_SLURRY.get();
     }
 
-@Override
+    @Override
     public FluidState getFlowing(int level, boolean falling) {
-        return (this.getFlowing().defaultFluidState().setValue(LEVEL, level)).setValue(FALLING, falling);
-        //return ThoughtSlurry.FLOWING_FLUID;
+        return this.getFlowing().defaultFluidState().setValue(LEVEL, level).setValue(FALLING, falling);
     }
-
-
-/*@Override
-    public Fluid getFlowing() {
-        return Flowing.FLOWING_FLUID;
-    }*/
-
-
-
 
     @Override
     protected boolean canConvertToSource(Level world) {
@@ -80,9 +53,10 @@ public class ThoughtSlurry extends FlowingFluid {
 
     @Override
     protected void beforeDestroyingBlock(LevelAccessor world, BlockPos pos, BlockState state) {
-        final BlockEntity blockEntity = state.hasBlockEntity() ? world.getBlockEntity(pos) : null;
+        final var blockEntity = state.hasBlockEntity() ? world.getBlockEntity(pos) : null;
         Block.dropResources(state, world, pos, blockEntity);
     }
+
 
     @Override
     protected int getSlopeFindDistance(LevelReader world) {
@@ -94,12 +68,10 @@ public class ThoughtSlurry extends FlowingFluid {
         return 1;
     }
 
-@Override
+    @Override
     public Item getBucket() {
         return OneironautItemRegistry.THOUGHT_SLURRY_BUCKET.get();
-       // return Items.LAVA_BUCKET;
     }
-
 
     @Override
     protected boolean canBeReplacedWith(FluidState state, BlockGetter world, BlockPos pos, Fluid fluid, Direction direction) {
@@ -118,7 +90,10 @@ public class ThoughtSlurry extends FlowingFluid {
 
     @Override
     protected BlockState createLegacyBlock(FluidState state) {
-        return ThoughtSlurryBlock.INSTANCE.defaultBlockState().setValue(LiquidBlock.LEVEL, getLegacyLevel(state));
+        // Don't use any static INSTANCE - always get via registry!
+        return org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautBlockRegistry.THOUGHT_SLURRY_BLOCK.get()
+                .defaultBlockState()
+                .setValue(net.minecraft.world.level.block.LiquidBlock.LEVEL, getLegacyLevel(state));
     }
 
     @Override
@@ -128,10 +103,13 @@ public class ThoughtSlurry extends FlowingFluid {
 
     @Override
     public int getAmount(FluidState state) {
-        //return state.getLevel();
         return 8;
     }
 
+    @Override
+    public FluidType getFluidType() {
+        return OneironautFluidTypes.THOUGHT_SLURRY_TYPE.get();
+    }
 
     public static class Flowing extends ThoughtSlurry {
         @Override
@@ -149,15 +127,14 @@ public class ThoughtSlurry extends FlowingFluid {
         public int getAmount(FluidState state) {
             return state.getValue(FlowingFluid.LEVEL);
         }
-
     }
 
     public static class Still extends ThoughtSlurry {
+        @Override
         protected void createFluidStateDefinition(StateDefinition.Builder<Fluid, FluidState> builder) {
             super.createFluidStateDefinition(builder);
             builder.add(FlowingFluid.LEVEL);
         }
-
 
         @Override
         public boolean isSource(FluidState state) {
@@ -168,7 +145,5 @@ public class ThoughtSlurry extends FlowingFluid {
         public int getAmount(FluidState state) {
             return 8;
         }
-
     }
-
 }

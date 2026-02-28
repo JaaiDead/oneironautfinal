@@ -14,6 +14,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import org.arcticquests.dev.oneironaut.oneironautt.block.ThoughtSlurry;
 import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautBlockRegistry;
+import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautMiscRegistry;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -52,7 +53,7 @@ public class NoosphereSeaVolcano extends Feature<NoosphereSeaVolcanoConfig> {
         if (true){
             for (int y = origin.getY(); y < 32; y++){
                 scanPos = scanPos.above();
-                if ((world.getFluidState(scanPos).getType().equals(ThoughtSlurry.STILL_FLUID) && world.getBlockState(scanPos.above()).isAir())){
+                if ((world.getFluidState(scanPos).getType() == OneironautMiscRegistry.THOUGHT_SLURRY.get() && world.getBlockState(scanPos.above()).isAir())){
                     //make a basalt volcano with pseudoamethyst in the middle
                     //BlockPos currentPos = scanPos;
                     //Vec3i offset;

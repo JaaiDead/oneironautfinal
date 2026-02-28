@@ -13,12 +13,15 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautItemRegistry;
+import org.arcticquests.dev.oneironaut.oneironautt.registry.OneironautMiscRegistry;
 
 public interface Slurryloggable extends SimpleWaterloggedBlock {
     BooleanProperty slurrylogged = BooleanProperty.create("slurrylogged");
+
     @Override
     default boolean canPlaceLiquid(BlockGetter world, BlockPos pos, BlockState state, Fluid fluid){
-        return fluid == Fluids.WATER || fluid == ThoughtSlurry.STILL_FLUID.getSource(false).getType();
+        // Compare against registered fluid instance!
+        return fluid == Fluids.WATER || fluid == OneironautMiscRegistry.THOUGHT_SLURRY.get();
     }
 
     @Override
@@ -27,11 +30,11 @@ public interface Slurryloggable extends SimpleWaterloggedBlock {
             BooleanProperty property = null;
             if (fluidState.getType() == Fluids.WATER){
                 property = BlockStateProperties.WATERLOGGED;
-            } else if (fluidState.getType() == ThoughtSlurry.STILL_FLUID.getSource(false).getType()) {
+            } else if (fluidState.getType() == OneironautMiscRegistry.THOUGHT_SLURRY.get()) {
                 property = slurrylogged;
             }
             if (!world.isClientSide() && property != null) {
-                world.setBlock(pos, (BlockState)state.setValue(property, true), 3);
+                world.setBlock(pos, state.setValue(property, true), 3);
                 world.scheduleTick(pos, fluidState.getType(), fluidState.getType().getTickDelay(world));
             }
             return true;
@@ -43,13 +46,13 @@ public interface Slurryloggable extends SimpleWaterloggedBlock {
     @Override
     default ItemStack pickupBlock(LevelAccessor world, BlockPos pos, BlockState state) {
         if (state.getValue(BlockStateProperties.WATERLOGGED)) {
-            world.setBlock(pos, (BlockState)state.setValue(BlockStateProperties.WATERLOGGED, false), 3);
+            world.setBlock(pos, state.setValue(BlockStateProperties.WATERLOGGED, false), 3);
             if (!state.canSurvive(world, pos)) {
                 world.destroyBlock(pos, true);
             }
             return new ItemStack(Items.WATER_BUCKET);
         } else if (state.getValue(slurrylogged)){
-            world.setBlock(pos, (BlockState)state.setValue(slurrylogged, false), 3);
+            world.setBlock(pos, state.setValue(slurrylogged, false), 3);
             if (!state.canSurvive(world, pos)) {
                 world.destroyBlock(pos, true);
             }

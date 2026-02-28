@@ -45,6 +45,8 @@ import org.arcticquests.dev.oneironaut.oneironautt.status.MediaDisintegrationEff
 import org.slf4j.Logger;
 import ram.talia.hexal.common.entities.WanderingWisp;
 
+import java.time.LocalDate;
+import java.time.ZoneOffset;
 import java.util.*;
 import java.util.function.Consumer;
 
@@ -65,10 +67,10 @@ public class Oneironaut {
     public Oneironaut() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-
         OneironautBlockRegistry.init(modEventBus);
-        OneironautMiscRegistry.init(modEventBus);
         OneironautItemRegistry.init(modEventBus);
+        OneironautFluidTypes.init(modEventBus);
+        OneironautMiscRegistry.init(modEventBus);
 
         OneironautRecipesForge.init(modEventBus);
 
@@ -76,9 +78,6 @@ public class Oneironaut {
 
         // Register the commonSetup method for modloading (keep for other setup work)
         modEventBus.addListener(this::commonSetup);
-
-
-
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new ForgeEventHandler());
 

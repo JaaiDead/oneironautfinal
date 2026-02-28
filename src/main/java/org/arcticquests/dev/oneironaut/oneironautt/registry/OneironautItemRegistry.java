@@ -34,17 +34,6 @@ public class OneironautItemRegistry {
         TABS.register(modEventBus);
     }
 
-    public static final RegistryObject<CreativeModeTab> ONEIRONAUT_GROUP =
-            TABS.register("oneironaut", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.oneironaut.oneironaut"))
-                    .icon(() -> new ItemStack(OneironautItemRegistry.PSUEDOAMETHYST_SHARD.get()))
-                    .displayItems((params, output) -> {
-                        // Add entries here (items and blocks)
-                        output.accept(OneironautItemRegistry.PSUEDOAMETHYST_SHARD.get());
-                        output.accept(OneironautBlockRegistry.WISP_LANTERN.get().asItem());
-                    })
-                    .build()
-            );
 
     private static final Item.Properties ONEIRONAUT_STACKABLE64 = new Item.Properties().stacksTo(64);
     private static final Item.Properties ONEIRONAUT_STACKABLE64_NOTAB = new Item.Properties().stacksTo(64);
@@ -155,4 +144,95 @@ public class OneironautItemRegistry {
     public static final RegistryObject<MonkfruitItemJam> MONKFRUIT_JAM = ITEMS.register("hexjam", () -> {
         return new MonkfruitItemJam(((ONEIRONAUT_STACKABLE64).food(MONKFRUIT_FOOD_JAM)));
     });
+
+
+    public static final RegistryObject<CreativeModeTab> ONEIRONAUT_GROUP =
+            TABS.register("oneironaut", () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.oneironaut.oneironaut"))
+                    .icon(() -> new ItemStack(OneironautItemRegistry.PSUEDOAMETHYST_SHARD.get()))
+                    .displayItems((params, output) -> {
+
+                        // Items
+                        output.accept(PSUEDOAMETHYST_SHARD.get());
+                        output.accept(SHIFTING_PSEUDOAMETHYST.get());
+                        output.accept(THOUGHT_SLURRY_BUCKET.get());
+                        output.accept(REVERBERATION_ROD.get());
+                        output.accept(BOTTOMLESS_MEDIA_ITEM.get());
+                        output.accept(BOTTOMLESS_CASTING_ITEM.get());
+                        output.accept(ECHO_STAFF.get());
+                        output.accept(BEACON_STAFF.get());
+                        output.accept(SPOON_STAFF.get());
+                        output.accept(PIGMENT_NOOSPHERE.get());
+                        output.accept(PIGMENT_FLAME.get());
+                        output.accept(PIGMENT_ECHO.get());
+                        output.accept(PIGMENT_FRENZY.get());
+                        output.accept(PIGMENT_CLOCK.get());
+                        output.accept(MEMORY_FRAGMENT.get());
+                        output.accept(WISP_CAPTURE_ITEM.get());
+                        output.accept(MIND_SCALPEL.get());
+                        output.accept(RENDER_THORNS.get());
+                        output.accept(LIBRARY_CARD.get());
+                        output.accept(RIFT_RESIDUE.get());
+
+                        // BlockItems
+                        output.accept(PSUEDOAMETHYST_BLOCK_ITEM.get());
+                        output.accept(PSUEDOAMETHYST_BLOCK_INSUBSTANTIAL_ITEM.get());
+                        output.accept(SUPER_BUDDING_ITEM.get());
+                        output.accept(NOOSPHERE_BASALT_ITEM.get());
+                        output.accept(WISP_LANTERN_ITEM.get());
+                        output.accept(WISP_LANTERN_TINTED_ITEM.get());
+                        output.accept(SENTINEL_SENSOR_ITEM.get());
+                        output.accept(SENTINEL_TRAP_ITEM.get());
+                        output.accept(RAYCAST_BLOCKER_ITEM.get());
+                        output.accept(RAYCAST_BLOCKER_GLASS_ITEM.get());
+                        output.accept(HEX_RESISTANT_BLOCK_ITEM.get());
+                        output.accept(CIRCLE_ITEM.get());
+                        output.accept(MEDIA_ICE_ITEM.get());
+                        output.accept(MEDIA_GEL_ITEM.get());
+                        output.accept(CELL_ITEM.get());
+                        output.accept(WISP_BATTERY_ITEM.get());
+                        output.accept(WISP_BATTERY_DECORATIVE_ITEM.get());
+                        output.accept(HOVER_ELEVATOR_ITEM.get());
+                        output.accept(HOVER_REPEATER_ITEM.get());
+                        output.accept(PSEUDOAMETHYST_BUD_SMALL_ITEM.get());
+                        output.accept(PSEUDOAMETHYST_BUD_MEDIUM_ITEM.get());
+                        output.accept(PSEUDOAMETHYST_BUD_LARGE_ITEM.get());
+                        output.accept(PSEUDOAMETHYST_CLUSTER_ITEM.get());
+                        output.accept(SPACE_BOMB_ITEM.get());
+                        output.accept(SLIPWAY_SUPPRESSOR_ITEM.get());
+                        output.accept(EXTRADIM_LOCUS_ITEM.get());
+
+                        // Concept modifiers
+                        output.accept(CONCEPT_MODIFIER_EMPTY.get());
+                        output.accept(CONCEPT_MODIFIER_SUS.get());
+
+                        // “Patchouli/hexdoc only” items (if you still want them visible)
+                        output.accept(INACTIVE_SLIPWAY_ITEM.get());
+                        output.accept(RIFT_RESIDUE_DROPPER_ITEM.get());
+
+                        // Color variants
+                        for (DyeColor color : DyeColor.values()) {
+                            RegistryObject<BlockItem> obj = COLORFUL_CONCEPT_MODIFIERS.get(color);
+                            if (obj != null) output.accept(obj.get());
+                        }
+
+                        output.accept(CONCEPT_MODIFIER_GRIDSIZE.get());
+                        output.accept(CONCEPT_MODIFIER_MAXHEALTH.get());
+                        output.accept(CONCEPT_MODIFIER_GTP_DROP.get());
+                        output.accept(CONCEPT_MODIFIER_ANTIEROSION.get());
+                        output.accept(CONCEPT_MODIFIER_REFERENCE_FALSY.get());
+                        output.accept(CONCEPT_MODIFIER_REFERENCE_COMPARISON.get());
+                        output.accept(CONCEPT_MODIFIER_STACK_SIZE.get());
+                        output.accept(CONCEPT_CORE.get());
+
+                        output.accept(CONCEPT_CONNECTOR.get());
+
+                        output.accept(MONKFRUIT.get());
+                        output.accept(MONKFRUIT_COOKED.get());
+                        output.accept(MONKFRUIT_JAM.get());
+                    })
+                    .build()
+            );
+
+
 }
