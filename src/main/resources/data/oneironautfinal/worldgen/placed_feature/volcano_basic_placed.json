@@ -1,9 +1,0 @@
-{
-  "feature": "oneironaut:volcano_basic",
-  "placement": [
-    {
-      "type": "minecraft:rarity_filter",
-      "chance": 1000
-    }
-  ]
-}

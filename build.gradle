@@ -76,6 +76,7 @@ mixin {
     config "${mod_id}.mixins.json"
 }
 
+sourceSets.main.kotlin.srcDirs += 'src/main/java'
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
@@ -112,6 +113,7 @@ dependencies {
     // Caelus from CurseMaven
     runtimeOnly fg.deobf("curse.maven:caelus-308989:5281700")
     implementation fg.deobf("curse.maven:inline-971167:6556850")
+    implementation fg.deobf("curse.maven:paucal-597824:5687007")
     implementation fg.deobf("curse.maven:paucal-597824:5687007")
 
     compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-80-FORGE:api")
@@ -157,6 +159,8 @@ tasks.named('jar', Jar).configure {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
+
 kotlin {
     jvmToolchain(17)
+
 }

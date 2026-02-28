@@ -5,7 +5,6 @@ import at.petrak.hexcasting.api.pigment.FrozenPigment;
 import at.petrak.hexcasting.common.items.ItemStaff;
 import at.petrak.hexcasting.common.lib.HexItems;
 import com.mojang.logging.LogUtils;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -27,7 +26,9 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.arcticquests.dev.oneironaut.oneironautt.block.InactiveSlipwayBlock;
@@ -38,8 +39,7 @@ import org.arcticquests.dev.oneironaut.oneironautt.casting.conceptmodification.C
 import org.arcticquests.dev.oneironaut.oneironautt.casting.conceptmodification.ConceptModifierManager;
 import org.arcticquests.dev.oneironaut.oneironautt.casting.idea.IdeaInscriptionManager;
 import org.arcticquests.dev.oneironaut.oneironautt.item.BottomlessMediaItem;
-import org.arcticquests.dev.oneironaut.oneironautt.recipe.OneironautRecipeSerializer;
-import org.arcticquests.dev.oneironaut.oneironautt.recipe.OneironautRecipeTypes;
+import org.arcticquests.dev.oneironaut.oneironautt.recipe.OneironautRecipesForge;
 import org.arcticquests.dev.oneironaut.oneironautt.registry.*;
 import org.arcticquests.dev.oneironaut.oneironautt.status.MediaDisintegrationEffect;
 import org.slf4j.Logger;
@@ -50,10 +50,6 @@ import java.util.function.Consumer;
 
 import static org.arcticquests.dev.oneironaut.oneironautt.MiscAPIKt.stringToWorld;
 
-
-/**
- * This is effectively the loading entrypoint for most of your code, now adapted for Forge.
- */
 @Mod(Oneironaut.MODID)
 public class Oneironaut {
     public static final String MODID = "oneironaut";
@@ -68,14 +64,21 @@ public class Oneironaut {
 
     public Oneironaut() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        OneironautBlockRegistry.init(modEventBus);
 
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
+
+        OneironautBlockRegistry.init(modEventBus);
         OneironautMiscRegistry.init(modEventBus);
         OneironautItemRegistry.init(modEventBus);
+
+        OneironautRecipesForge.init(modEventBus);
+
         OneironautFeatureRegistry.init(modEventBus);
-        // Register ourselves for server and other game events we are interested in
+
+        // Register the commonSetup method for modloading (keep for other setup work)
+        modEventBus.addListener(this::commonSetup);
+
+
+
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new ForgeEventHandler());
 
@@ -86,12 +89,18 @@ public class Oneironaut {
         event.enqueueWork(() -> {
             OneironautIotaTypeRegistry.init();
             OneironautPatternRegistry.init();
-            OneironautRecipeSerializer.registerSerializers(OneironautRecipeTypes.Companion.bind(BuiltInRegistries.RECIPE_SERIALIZER));
-            OneironautRecipeTypes.registerTypes(OneironautRecipeTypes.Companion.bind(BuiltInRegistries.RECIPE_TYPE));
+            ModLoadingContext.get().registerConfig(
+                    ModConfig.Type.SERVER,
+                    OneironautForgeConfig.INSTANCE.getSERVER_SPEC()
+            );
+            OneironautConfigForgeBridge.bind();
+
+
+            // OneironautRecipeSerializer.registerSerializers(OneironautRecipeTypes.Companion.bind(BuiltInRegistries.RECIPE_SERIALIZER));
+            // OneironautRecipeTypes.registerTypes(OneironautRecipeTypes.Companion.bind(BuiltInRegistries.RECIPE_TYPE));
         });
     }
 
-    // Event handler class for game events
     public static class ForgeEventHandler {
 
         @SubscribeEvent
@@ -134,12 +143,10 @@ public class Oneironaut {
         @SubscribeEvent
         public void onServerTick(TickEvent.ServerTickEvent event) {
             if (event.phase == TickEvent.Phase.START) {
-                // Equivalent to SERVER_PRE
                 if (server != null) {
                     BottomlessMediaItem.time = server.overworld().getGameTime();
                 }
             } else if (event.phase == TickEvent.Phase.END) {
-                // Equivalent to SERVER_POST
                 if (server != null) {
                     try {
                         HoverElevatorBlockEntity.processHover(true, server.overworld().getGameTime());
@@ -219,7 +226,6 @@ public class Oneironaut {
         TRACE
     }
 
-    // for easily toggling whether several things should be logged without having to search through the whole file
     public static void boolLogger(String str, boolean bool) {
         boolLogger(str, bool, Loggers.INFO);
     }
@@ -230,7 +236,7 @@ public class Oneironaut {
                 case DEBUG -> LOGGER::debug;
                 case WARN -> LOGGER::warn;
                 case ERROR -> LOGGER::error;
-                case FATAL -> (s) -> LOGGER.error("[FATAL] " + s); // SLF4J doesn't have fatal
+                case FATAL -> (s) -> LOGGER.error("[FATAL] " + s);
                 case TRACE -> LOGGER::trace;
                 default -> LOGGER::info;
             };
@@ -238,9 +244,6 @@ public class Oneironaut {
         }
     }
 
-    /**
-     * Shortcut for identifiers specific to this mod.
-     */
     public static ResourceLocation id(String string) {
         return ResourceLocation.fromNamespaceAndPath(MODID, string);
     }

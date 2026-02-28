@@ -37,7 +37,6 @@ object OneironautConfig {
             }
         }
 
-        // Simple extensions for resource location configs
         @JvmStatic
         fun anyMatch(keys: MutableList<out String>, key: ResourceLocation): Boolean {
             for (s in keys) {

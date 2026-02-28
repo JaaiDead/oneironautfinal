@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "org.arcticquests.dev.oneironaut.oneironautt.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "oneironautfinal.refmap.json",
+  "refmap": "oneironaut.refmap.json",
   "mixins": [
     "BlockRaycastImmunityMixin",
     "CubeLoreGrantMixin",

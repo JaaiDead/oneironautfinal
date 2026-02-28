@@ -34,10 +34,17 @@ public class OneironautItemRegistry {
         TABS.register(modEventBus);
     }
 
-    //public static final ItemGroup ONEIRONAUT_GROUP = CreativeTabRegistry.create(Text.of("oneironaut:oneironaut"), () -> new ItemStack(OneironautItemRegistry.PSUEDOAMETHYST_SHARD.get()));
-    public static final RegistryObject<CreativeModeTab> ONEIRONAUT_GROUP = TABS.register("oneironaut", () -> CreativeTabRegistry.create(
-            Component.translatable("itemGroup.oneironaut.oneironaut"),
-            () -> OneironautItemRegistry.PSUEDOAMETHYST_SHARD.get().getDefaultInstance()));
+    public static final RegistryObject<CreativeModeTab> ONEIRONAUT_GROUP =
+            TABS.register("oneironaut", () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.oneironaut.oneironaut"))
+                    .icon(() -> new ItemStack(OneironautItemRegistry.PSUEDOAMETHYST_SHARD.get()))
+                    .displayItems((params, output) -> {
+                        // Add entries here (items and blocks)
+                        output.accept(OneironautItemRegistry.PSUEDOAMETHYST_SHARD.get());
+                        output.accept(OneironautBlockRegistry.WISP_LANTERN.get().asItem());
+                    })
+                    .build()
+            );
 
     private static final Item.Properties ONEIRONAUT_STACKABLE64 = new Item.Properties().stacksTo(64);
     private static final Item.Properties ONEIRONAUT_STACKABLE64_NOTAB = new Item.Properties().stacksTo(64);

@@ -31,7 +31,15 @@ import java.util.Map;
 
 public class OvercastDamageEnchant extends Enchantment {
     private static final Map<LivingEntity, Long> cooldownMap = new HashMap<>();
-    private static final FrozenPigment playerlessColor = FrozenPigment.DEFAULT.get();//new FrozenColorizer(HexItems.DYE_COLORIZERS.get(DyeColor.PURPLE).getDefaultStack(), Util.NIL_UUID);
+
+    private static FrozenPigment playerlessColor = null;
+    private static FrozenPigment getPlayerlessColor() {
+        if (playerlessColor == null) {
+            playerlessColor = FrozenPigment.DEFAULT.get();
+        }
+        return playerlessColor;
+    }
+
     public OvercastDamageEnchant() {
         super(Rarity.RARE, EnchantmentCategory.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     }
@@ -61,53 +69,44 @@ public class OvercastDamageEnchant extends Enchantment {
         applyMindDamage(user, target, level, target.getType().is(OneironautTags.Entities.mindRenderAutospare));
     }
 
-    public boolean checkCompatibility(Enchantment other){
+    public boolean checkCompatibility(Enchantment other) {
         return !(other instanceof DamageEnchantment) && this != other;
     }
-
-    /*public float getAttackDamage(int level, EntityGroup group) {
-        return 0.5F + (float)Math.max(0, level - 1) * 0.5F;
-    }*/
 
     @Override
     public int getMaxLevel() {
         return 5;
     }
 
-    public static void applyMindDamage(@Nullable LivingEntity user, @NotNull Entity target, int level, boolean autospare){
+    public static void applyMindDamage(@Nullable LivingEntity user, @NotNull Entity target, int level, boolean autospare) {
         Level world = target.level();
         long currentTime = world.getGameTime();
         long lastTime = cooldownMap.getOrDefault(user, 0L);
-        if (target instanceof LivingEntity livingTarget && (lastTime + 12) < currentTime && !world.isClientSide){
-            //user.sendMessage(Text.of(String.valueOf(lastTime)));
-            //ripped from the trulyHurt method to see if I could get more consistent results
+        if (target instanceof LivingEntity livingTarget && (lastTime + 12) < currentTime && !world.isClientSide) {
             boolean brainswept = false;
-            if (target instanceof Mob mob){
+            if (target instanceof Mob mob) {
                 brainswept = IXplatAbstractions.INSTANCE.isBrainswept(mob);
             }
             boolean creative = target instanceof Player player && (player.isSpectator() || player.isCreative());
             DamageSource overcastSource = livingTarget.damageSources().source(HexDamageTypes.OVERCAST);
-            if (!livingTarget.isInvulnerableTo(overcastSource) && !livingTarget.isDeadOrDying() && !brainswept && !creative){
+            if (!livingTarget.isInvulnerableTo(overcastSource) && !livingTarget.isDeadOrDying() && !brainswept && !creative) {
                 float oldHealth = livingTarget.getHealth();
                 float newHealth = oldHealth - (level / 2f);
-                if (newHealth > 0){
+                if (newHealth > 0) {
                     livingTarget.setHealth(newHealth);
-                } else if (newHealth <= 0 && autospare && newHealth < oldHealth){
+                } else if (newHealth <= 0 && autospare && newHealth < oldHealth) {
                     livingTarget.setHealth(0.1f);
                 } else {
-                    //die, avaritia user, die!
                     livingTarget.hurt(overcastSource, Float.MAX_VALUE);
                     livingTarget.kill();
                 }
                 AccessorWrappers.markHurt(livingTarget);
-                if (livingTarget.isAlive() && livingTarget.getHealth() <= 1f && target instanceof Mob mob){
+                if (livingTarget.isAlive() && livingTarget.getHealth() <= 1f && target instanceof Mob mob) {
                     boolean whitelisted = mob.getType().is(OneironautTags.Entities.mindRenderFlayWhitelist);
                     boolean blacklisted = mob.getType().is(OneironautTags.Entities.mindRenderFlayBlacklist);
-                    //if it has more than 100 max health, it's probably a boss, and I'm not letting people get flayed dragons
-                    if ((mob.getMaxHealth() <= 100.0f || whitelisted) /* but I am letting people get flayed wardens :) */ && !blacklisted){
-                        //Brainsweeping.brainsweep(mob);
+                    if ((mob.getMaxHealth() <= 100.0f || whitelisted) && !blacklisted) {
                         IXplatAbstractions.INSTANCE.setBrainsweepAddlData(mob);
-                        if (user instanceof ServerPlayer player){
+                        if (user instanceof ServerPlayer player) {
                             IXplatAbstractions.INSTANCE.sendPacketNear(target.position(), 128.0, (ServerLevel) mob.level(), new ParticleBurstPacket(
                                     target.position(), new Vec3(0.0, 0.1, 0.0), 0.1, 0.025,
                                     IXplatAbstractions.INSTANCE.getPigment(player), 64, false));
@@ -115,14 +114,13 @@ public class OvercastDamageEnchant extends Enchantment {
                         } else {
                             IXplatAbstractions.INSTANCE.sendPacketNear(target.position(), 128.0, (ServerLevel) mob.level(), new ParticleBurstPacket(
                                     target.position(), new Vec3(0.0, 0.1, 0.0), 0.1, 0.025,
-                                    playerlessColor, 64, false));
+                                    getPlayerlessColor(), 64, false));
                             world.playSound(null, mob, SoundEvents.ELDER_GUARDIAN_CURSE, SoundSource.BLOCKS, 0.5f, 1.0f);
                         }
                     }
                 }
             }
-            //Mishap.Companion.trulyHurt(livingTarget, HexDamageSources.OVERCAST, level);
-            if (user != null){
+            if (user != null) {
                 cooldownMap.put(user, currentTime);
             }
         }
