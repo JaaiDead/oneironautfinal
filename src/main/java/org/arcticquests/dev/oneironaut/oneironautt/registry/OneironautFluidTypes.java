@@ -45,7 +45,7 @@ public class OneironautFluidTypes {
 
                         @Override
                         public int getTintColor() {
-                            return 0xFFA020F0;
+                            return 0xFFC87FFA;
                         }
 
                         @Override
@@ -55,7 +55,7 @@ public class OneironautFluidTypes {
 
                         @Override
                         public @NotNull Vector3f modifyFogColor(Camera camera, float partialTick, ClientLevel level, int renderDistance, float darkenWorldAmount, Vector3f fluidFogColor) {
-                            return new Vector3f(0.63f, 0.13f, 0.94f);
+                            return new Vector3f(0.85f, 0.7f, 0.97f);
                         }
                     });
                 }

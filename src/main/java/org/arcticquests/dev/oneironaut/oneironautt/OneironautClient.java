@@ -108,21 +108,6 @@ public final class OneironautClient {
         return output;
     }
 
-    // ---- Dimension effects registration (Forge-safe) ----
-    @SuppressWarnings("unchecked")
-    private static void registerDimensionEffects(ResourceLocation id, DimensionSpecialEffects effects) {
-        try {
-            Field f = DimensionSpecialEffects.class.getDeclaredField("EFFECTS");
-            f.setAccessible(true);
-            Map<ResourceLocation, DimensionSpecialEffects> map =
-                    (Map<ResourceLocation, DimensionSpecialEffects>) f.get(null);
-            map.put(id, effects);
-        } catch (ReflectiveOperationException e) {
-            Oneironaut.LOGGER.warn("Failed to register DimensionSpecialEffects for {}: {}", id, e.toString());
-        }
-    }
-
-    // ---------------- MOD BUS: do client registrations here ----------------
     @Mod.EventBusSubscriber(modid = Oneironaut.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static final class ModBus {
         private ModBus() {}
@@ -132,13 +117,11 @@ public final class OneironautClient {
             event.enqueueWork(() -> {
                 cachedClient = Minecraft.getInstance();
 
-                // ---- Scrying lens overlays ----
                 ScryingLensOverlayRegistry.addDisplayer(
                         OneironautBlockRegistry.WISP_BATTERY.get(),
                         WispBatteryEntity::applyScryingLensOverlay
                 );
 
-                // ---- Concept modifier overlays ----
                 List<RegistryShim<ConceptModifierBlock>> conceptModifiers = List.of(
                         new RegistryShim<>(OneironautBlockRegistry.CONCEPT_MODIFIER_GRIDSIZE),
                         new RegistryShim<>(OneironautBlockRegistry.CONCEPT_MODIFIER_ANTIEROSION),
@@ -153,7 +136,6 @@ public final class OneironautClient {
                 }
                 ScryingLensOverlayRegistry.addDisplayer(OneironautBlockRegistry.CONCEPT_CORE.get(), ConceptCoreBlockEntity::applyScryingLensOverlay);
 
-                // ---- Render layers ----
                 List<Block> cutoutBlocks = new ArrayList<>(List.of(
                         OneironautBlockRegistry.WISP_LANTERN.get(),
                         OneironautBlockRegistry.WISP_LANTERN_TINTED.get(),

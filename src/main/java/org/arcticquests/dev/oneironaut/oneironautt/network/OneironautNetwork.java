@@ -20,12 +20,11 @@ public final class OneironautNetwork {
 
     public static void register() {
         CHANNEL.messageBuilder(HoverliftAntiDesyncPacket.class, id++)
-                .encoder((msg, buf) -> {}) // no payload
-                .decoder(buf -> new HoverliftAntiDesyncPacket())
+                .encoder((HoverliftAntiDesyncPacket.Companion::encode)) // no payload
+                .decoder(HoverliftAntiDesyncPacket.Companion::decode)
                 .consumerMainThread(HoverliftAntiDesyncPacket.Companion::handle)
                 .add();
 
-        // ParticleBurstPacket
         CHANNEL.messageBuilder(ParticleBurstPacket.class, id++)
                 .encoder(ParticleBurstPacket::serialize)
                 .decoder(ParticleBurstPacket.Companion::deserialise)
@@ -34,7 +33,6 @@ public final class OneironautNetwork {
                 })
                 .add();
 
-        // FireballUpdatePacket
         CHANNEL.messageBuilder(FireballUpdatePacket.class, id++)
                 .encoder(FireballUpdatePacket::serialize)
                 .decoder(FireballUpdatePacket.Companion::deserialise)
@@ -43,7 +41,6 @@ public final class OneironautNetwork {
                 })
                 .add();
 
-        // ItemUpdatePacket
         CHANNEL.messageBuilder(ItemUpdatePacket.class, id++)
                 .encoder(ItemUpdatePacket::serialize)
                 .decoder(ItemUpdatePacket.Companion::deserialise)
@@ -52,7 +49,6 @@ public final class OneironautNetwork {
                 })
                 .add();
 
-        // SpoopyScreamPacket
         CHANNEL.messageBuilder(SpoopyScreamPacket.class, id++)
                 .encoder(SpoopyScreamPacket::serialize)
                 .decoder(SpoopyScreamPacket.Companion::deserialise)

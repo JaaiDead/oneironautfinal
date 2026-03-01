@@ -5,6 +5,7 @@ import at.petrak.hexcasting.api.casting.iota.IotaType;
 import at.petrak.hexcasting.api.item.IotaHolderItem;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
@@ -28,18 +29,18 @@ public class RiftResidueItem extends ArbitaryDeltaPigmentItem implements IotaHol
     public RiftResidueItem(Properties settings, int[] colors, Supplier<Double> deltaGetter) {
         super(settings, colors, deltaGetter);
     }
-
+    @Override
     public int getUseDuration(ItemStack stack) {
         return 128;
     }
-
+    @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player user, InteractionHand hand){
         super.use(world, user, hand);
         ItemStack itemStack = user.getItemInHand(hand);
         user.startUsingItem(hand);
         return InteractionResultHolder.consume(itemStack);
     }
-
+    @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user){
         if (!world.isClientSide && world != Oneironaut.getDeepNoosphere()){
             Vec3 newPos = MiscAPIKt.coerceWithinBorder(
@@ -50,7 +51,7 @@ public class RiftResidueItem extends ArbitaryDeltaPigmentItem implements IotaHol
         stack.shrink(1);
         return stack;
     }
-
+    @Override
     public UseAnim getUseAnimation(ItemStack stack){
         return UseAnim.EAT;
     }
@@ -58,15 +59,16 @@ public class RiftResidueItem extends ArbitaryDeltaPigmentItem implements IotaHol
     private static CompoundTag deepNooTag = null;
     @Override
     public @Nullable CompoundTag readIotaTag(ItemStack stack) {
-        if (Oneironaut.getDeepNoosphere() != null){
-            if (deepNooTag == null){
-                deepNooTag = IotaType.serialize(new DimIota(Oneironaut.getDeepNoosphere()));
+        try {
+            ServerLevel deep = Oneironaut.getDeepNoosphere();
+            if (deepNooTag == null) {
+                deepNooTag = IotaType.serialize(new DimIota(deep));
             }
             return deepNooTag.copy();
+        } catch (IllegalStateException e) {
+            return null;
         }
-        return null;
     }
-
     @Override
     public boolean writeable(ItemStack stack) {
         return false;

@@ -24,7 +24,7 @@ class SpoopyScreamPacket(val sound : SoundEvent, val pitch : Float) : IMessage {
 
     companion object {
         @JvmField
-        val ID: ResourceLocation = ResourceLocation(Oneironaut.MODID, "scream")
+        val ID: ResourceLocation = ResourceLocation.fromNamespaceAndPath(Oneironaut.MODID, "scream")
 
         @JvmStatic
         fun deserialise(buffer: ByteBuf): SpoopyScreamPacket {

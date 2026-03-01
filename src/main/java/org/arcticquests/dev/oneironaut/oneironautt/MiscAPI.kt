@@ -12,41 +12,39 @@ import at.petrak.hexcasting.api.mod.HexConfig
 import at.petrak.hexcasting.api.pigment.FrozenPigment
 import at.petrak.hexcasting.common.lib.HexItems
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes
+import at.petrak.hexcasting.forge.xplat.ForgeXplatImpl
 import at.petrak.hexcasting.xplat.IXplatAbstractions
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation
-import net.minecraft.world.level.block.Block
-import net.minecraft.world.level.block.state.BlockState
-import net.minecraft.world.level.block.Blocks
-import net.minecraft.world.entity.Entity
-import net.minecraft.world.entity.EntityType
-import net.minecraft.world.entity.LivingEntity
-import net.minecraft.world.entity.ai.goal.GoalSelector
-import net.minecraft.world.entity.decoration.ArmorStand
-import net.minecraft.world.entity.Mob
-import net.minecraft.world.item.Item
-import net.minecraft.nbt.CompoundTag
-import net.minecraft.world.item.crafting.RecipeManager
-import net.minecraft.resources.ResourceKey
-import net.minecraft.core.registries.Registries
-import net.minecraft.tags.TagKey
-import net.minecraft.server.MinecraftServer
-import net.minecraft.server.level.ServerPlayer
-import net.minecraft.server.level.ServerLevel
-import net.minecraft.world.level.block.state.properties.BlockStateProperties
-import net.minecraft.world.level.block.state.properties.Property
-import net.minecraft.world.item.DyeColor
-import net.minecraft.resources.ResourceLocation
 import net.minecraft.Util
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.core.Vec3i
-import net.minecraft.network.chat.Component
-import net.minecraft.world.entity.ai.memory.MemoryModuleType
-import net.minecraft.world.entity.npc.Villager
+import net.minecraft.core.registries.Registries
+import net.minecraft.nbt.CompoundTag
+import net.minecraft.resources.ResourceKey
+import net.minecraft.resources.ResourceLocation
+import net.minecraft.server.MinecraftServer
+import net.minecraft.server.level.ServerLevel
+import net.minecraft.server.level.ServerPlayer
+import net.minecraft.tags.TagKey
+import net.minecraft.world.entity.Entity
+import net.minecraft.world.entity.EntityType
+import net.minecraft.world.entity.LivingEntity
+import net.minecraft.world.entity.Mob
+import net.minecraft.world.entity.ai.goal.GoalSelector
+import net.minecraft.world.entity.decoration.ArmorStand
 import net.minecraft.world.entity.npc.VillagerDataHolder
 import net.minecraft.world.entity.npc.VillagerProfession
-import net.minecraft.world.level.WorldGenLevel
+import net.minecraft.world.item.DyeColor
+import net.minecraft.world.item.Item
+import net.minecraft.world.item.crafting.RecipeManager
 import net.minecraft.world.level.Level
+import net.minecraft.world.level.WorldGenLevel
+import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.Blocks
+import net.minecraft.world.level.block.state.BlockState
+import net.minecraft.world.level.block.state.properties.BlockStateProperties
+import net.minecraft.world.level.block.state.properties.Property
 import net.minecraft.world.level.border.WorldBorder
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
@@ -66,6 +64,7 @@ import java.util.*
 import kotlin.math.absoluteValue
 import kotlin.math.floor
 import kotlin.random.Random
+
 @Suppress("forRemoval")
 fun List<Iota>.getDimIota(idx: Int, argc: Int = 0): DimIota {
     val x = this.getOrElse(idx) { throw MishapNotEnoughArgs(idx + 1, this.size) }
@@ -357,71 +356,45 @@ var Entity.isDecorative: Boolean
     get() = this.persistentData.getBoolean(DECORATIVE_KEY)
     set(value) { this.persistentData.putBoolean(DECORATIVE_KEY, value) }
 
-private const val BRAINSWEPT_KEY = "oneironaut:brainswept"
 
-fun Mob.setBrainsweptForge(value: Boolean) {
-    this.persistentData.putBoolean(BRAINSWEPT_KEY, value)
-}
 
-fun Mob.isBrainsweptForge(): Boolean =
-    this.persistentData.getBoolean(BRAINSWEPT_KEY)
-
-/**
- * Restores a brainswept mob's state; resets villagers to Nitwit.
- * Sends a "UnBrainsweep" packet to nearby players for visual effect, if needed.
- */
 fun Mob.unbrainsweep() {
-
-    if (!this.level().isClientSide) {
-        Oneironaut.LOGGER.info(
-            "Unbrainsweeping mob: {} (id: {}) at [{}, {}, {}]",
-            this.name.string, this.id, this.x, this.y, this.z
-        )
-        val msg = Component.literal("Unbrainswept ${this.name.string} at (${this.x.toInt()}, ${this.y.toInt()}, ${this.z.toInt()})")
-        for (player in (this.level() as ServerLevel).players()) {
-            if (player.position().distanceTo(this.position()) < 64) {
-                player.sendSystemMessage(msg)
-            }
-        }
-
+    assert(false)
+    val patient = this
+    if (!patient.level().isClientSide){
+        Oneironaut.LOGGER.info("Attempting to unbrainsweep ${this.name} client-side")
         OneironautNetwork.CHANNEL.send(
             PacketDistributor.NEAR.with {
                 PacketDistributor.TargetPoint(
-                    this.position().x, this.position().y, this.position().z,
-                    256.0,
-                    (this.level() as ServerLevel).dimension()
+                    patient.position().x,
+                    patient.position().y,
+                    patient.position().z,
+                    256.0 * 256.0,
+                    (patient.level() as ServerLevel).dimension()
                 )
             },
-            UnBrainsweepPacket(this.id)
+            UnBrainsweepPacket(patient.id)
         )
+    } else {
+        Oneironaut.LOGGER.info("Attempting to unbrainsweep ${this.name} server-side")
     }
-
-    if (!this.level().isClientSide) {
-        OneironautNetwork.CHANNEL.send(
-            PacketDistributor.NEAR.with {
-                PacketDistributor.TargetPoint(
-                    this.position().x, this.position().y, this.position().z,
-                    256.0,
-                    (this.level() as ServerLevel).dimension()
-                )
-            },
-            UnBrainsweepPacket(this.id)
-        )
-    }
-
-    this.setBrainsweptForge(false)
-
-    this.setNoAi(false)
-    val brain = this.brain
+    patient.persistentData.putBoolean(ForgeXplatImpl.TAG_BRAINSWEPT, false)
+    patient.isNoAi = false
+    val brain = patient.brain
+    patient.goalSelector.availableGoals.clear()
     brain.useDefaultActivity()
-    brain.updateActivityFromSchedule(this.level().dayTime, this.level().gameTime)
-
-    if (this is Villager) {
-        this.villagerData = this.villagerData
-            .setLevel(0)
-            .setProfession(VillagerProfession.NITWIT)
-        this.villagerXp = 0
+    brain.updateActivityFromSchedule(patient.level().dayTime, patient.level().gameTime)
+    if (patient is VillagerDataHolder){
+        val newData = patient.villagerData.setLevel(1).setProfession(VillagerProfession.NITWIT)
+        patient.villagerData = newData
     }
+
+
+    val refreshNBT = patient.saveWithoutId(CompoundTag())
+    val forgeTag = refreshNBT.getCompound("ForgeData")
+    forgeTag.putBoolean(ForgeXplatImpl.TAG_BRAINSWEPT, false)
+    refreshNBT.put("ForgeData", forgeTag)
+    patient.load(refreshNBT)
 }
 
 

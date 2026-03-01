@@ -168,7 +168,7 @@ public class Oneironaut {
                                     rand.nextGaussian() * gaussDistance,
                                     rand.nextGaussian() * gaussDistance));
                             ItemStack stack = randomWispPigments.get(rand.nextInt(randomWispPigments.size())).getDefaultInstance();
-                            wisp.setPigment(new FrozenPigment(stack, ((Entity) wisp).getUUID()));
+                            wisp.setPigment(new FrozenPigment(stack, wisp.getUUID()));
                             noosphere.addFreshEntity(wisp);
                         }
                     }

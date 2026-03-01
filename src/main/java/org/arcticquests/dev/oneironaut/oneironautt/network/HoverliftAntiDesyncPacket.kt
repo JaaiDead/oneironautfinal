@@ -6,12 +6,10 @@ import net.minecraft.world.effect.MobEffects
 import net.minecraftforge.network.NetworkEvent
 import java.util.function.Supplier
 
-//this packet is just for the server to tell the client "hey you recently used a hoverlift, make sure you aren't holding on to the status effect for too long"
 class HoverliftAntiDesyncPacket {
     companion object {
         @JvmStatic
         fun encode(msg: HoverliftAntiDesyncPacket, buf: FriendlyByteBuf) {
-            // no payload
         }
 
         @JvmStatic
