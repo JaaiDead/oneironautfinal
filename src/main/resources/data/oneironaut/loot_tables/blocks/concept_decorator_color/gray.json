@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oneironaut:concept_decorator_color/gray"
+          "name": "oneironaut:concept_decorator_color_gray"
         }
       ],
       "rolls": 1.0

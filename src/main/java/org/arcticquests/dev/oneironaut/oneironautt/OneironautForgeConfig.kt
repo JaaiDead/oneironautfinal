@@ -16,7 +16,7 @@ object OneironautForgeConfig {
         val infusionEternalChorus = builder.define("infusionEternalChorus", true)
         val allowOverworldReflection = builder.define("allowOverworldReflection", true)
         val allowNetherReflection = builder.define("allowNetherReflection", true)
-        val staleIPhialLenience = builder.defineInRange("staleIPhialLenience", 0.1, 0.0, 1.0)
+        val staleIPhialLenience: ForgeConfigSpec.DoubleValue? = builder.defineInRange("staleIPhialLenience", 0.1, 0.0, 1.0)
     }
 
     init {
