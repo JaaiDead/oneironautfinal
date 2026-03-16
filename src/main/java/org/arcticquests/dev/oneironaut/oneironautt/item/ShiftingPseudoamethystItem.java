@@ -1,6 +1,5 @@
 package org.arcticquests.dev.oneironaut.oneironautt.item;
 
-import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -9,7 +8,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.network.PacketDistributor;
 import org.arcticquests.dev.oneironaut.oneironautt.OneironautClient;
+import org.arcticquests.dev.oneironaut.oneironautt.network.OneironautNetwork;
 import org.arcticquests.dev.oneironaut.oneironautt.network.SpoopyScreamPacket;
 import org.jetbrains.annotations.Nullable;
 
@@ -25,7 +26,7 @@ public class ShiftingPseudoamethystItem extends Item {
         Level world = entity.level();
         if (!world.isClientSide && world instanceof ServerLevel serverWorld){
             float pitch = 0.75f + (world.random.nextFloat() / 2);
-            IXplatAbstractions.INSTANCE.sendPacketNear(entity.position(), 16.0, serverWorld, new SpoopyScreamPacket(SoundEvents.FOX_SCREECH, pitch));
+            OneironautNetwork.CHANNEL.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(entity.getX(), entity.getY(), entity.getZ(),16.0, serverWorld.dimension())),new SpoopyScreamPacket(SoundEvents.FOX_SCREECH, pitch));
         }
     }
 
