@@ -37,9 +37,9 @@ public class OneironautItemRegistry {
 
     private static final Item.Properties ONEIRONAUT_STACKABLE64 = new Item.Properties().stacksTo(64);
     private static final Item.Properties ONEIRONAUT_STACKABLE64_NOTAB = new Item.Properties().stacksTo(64);
-    private static final Item.Properties ONEIRONAUT_STACKABLE16 = ONEIRONAUT_STACKABLE64.stacksTo(16);
-    private static final Item.Properties ONEIRONAUT_UNSTACKABLE = ONEIRONAUT_STACKABLE64.stacksTo(1);
-    private static final Item.Properties ONEIRONAUT_UNSTACKABLE_1024 = ONEIRONAUT_UNSTACKABLE.durability(1024);
+    private static final Item.Properties ONEIRONAUT_STACKABLE16 = new Item.Properties().stacksTo(16);
+    private static final Item.Properties ONEIRONAUT_UNSTACKABLE = new Item.Properties().stacksTo(1);
+    private static final Item.Properties ONEIRONAUT_UNSTACKABLE_1024 = new Item.Properties().durability(1024);
 
     public static final RegistryObject<ItemStolenMediaProvider> PSUEDOAMETHYST_SHARD = ITEMS.register("pseudoamethyst_shard", () -> new
             ItemStolenMediaProvider(ONEIRONAUT_STACKABLE64, (int) (MediaConstants.SHARD_UNIT * 1.5), 1500));
@@ -108,7 +108,7 @@ public class OneironautItemRegistry {
     public static final Map<DyeColor, RegistryObject<BlockItem>> COLORFUL_CONCEPT_MODIFIERS = new HashMap<>();
     static {
         for (DyeColor color : DyeColor.values()) {
-            RegistryObject<BlockItem> supplier = ITEMS.register("concept_decorator_color/" + color.getName(), () -> new BlockItem(OneironautBlockRegistry.COLORFUL_CONCEPT_MODIFIERS.get(color).get(), ONEIRONAUT_STACKABLE64));
+            RegistryObject<BlockItem> supplier = ITEMS.register("concept_decorator_color_" + color.getName(), () -> new BlockItem(OneironautBlockRegistry.COLORFUL_CONCEPT_MODIFIERS.get(color).get(), ONEIRONAUT_STACKABLE64));
             COLORFUL_CONCEPT_MODIFIERS.put(color, supplier);
         }
     }
@@ -135,15 +135,9 @@ public class OneironautItemRegistry {
     public static final FoodProperties MONKFRUIT_FOOD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F).fast().alwaysEat().build();
     public static final FoodProperties MONKFRUIT_FOOD_COOKED = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F).alwaysEat().build();
     public static final FoodProperties MONKFRUIT_FOOD_JAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(1.0F).alwaysEat().build();
-    public static final RegistryObject<MonkfruitItem> MONKFRUIT = ITEMS.register("monkfruit", () -> {
-        return new MonkfruitItem(OneironautBlockRegistry.RENDER_BUSH.get(), ((ONEIRONAUT_STACKABLE64).food(MONKFRUIT_FOOD)));
-    });
-    public static final RegistryObject<MonkfruitItemCooked> MONKFRUIT_COOKED = ITEMS.register("monkfruit_cooked", () -> {
-        return new MonkfruitItemCooked(((ONEIRONAUT_STACKABLE64).food(MONKFRUIT_FOOD_COOKED)));
-    });
-    public static final RegistryObject<MonkfruitItemJam> MONKFRUIT_JAM = ITEMS.register("hexjam", () -> {
-        return new MonkfruitItemJam(((ONEIRONAUT_STACKABLE64).food(MONKFRUIT_FOOD_JAM)));
-    });
+    public static final RegistryObject<MonkfruitItem> MONKFRUIT = ITEMS.register("monkfruit", () -> new MonkfruitItem(OneironautBlockRegistry.RENDER_BUSH.get(), ((ONEIRONAUT_STACKABLE64).food(MONKFRUIT_FOOD))));
+    public static final RegistryObject<MonkfruitItemCooked> MONKFRUIT_COOKED = ITEMS.register("monkfruit_cooked", () -> new MonkfruitItemCooked(((ONEIRONAUT_STACKABLE64).food(MONKFRUIT_FOOD_COOKED))));
+    public static final RegistryObject<MonkfruitItemJam> MONKFRUIT_JAM = ITEMS.register("hexjam", () -> new MonkfruitItemJam(((ONEIRONAUT_STACKABLE64).food(MONKFRUIT_FOOD_JAM))));
 
 
     public static final RegistryObject<CreativeModeTab> ONEIRONAUT_GROUP =
